@@ -1,0 +1,33 @@
+:root {
+    --first-color: #157fc4;
+    --second-color: #fe5001;
+    --third-color: #f5f0e9;
+    --dark-color: #000;
+    --white-color: #fff;
+    --title-font: "Montserrat", sans-serif;
+    --title-font-weight: 800;
+    --text-font: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    font-family: var(--title-font) !important;
+    font-weight: var(--title-font-weight) !important;
+}
+p,
+a {
+    font-family: var(--text-font) !important;
+}
+a {
+    text-decoration: none !important;
+}
+ul {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}

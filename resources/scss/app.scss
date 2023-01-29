@@ -1,0 +1,146 @@
+// Variables
+@import "variables";
+//normalize
+@import "normalize.css/normalize.css";
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+//style
+@import "style.scss";
+
+// Шапка
+.wrapper-header {
+    position: absolute;
+    z-index: 500;
+}
+.header {
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    &_scroll {
+        background-color: var(--first-color);
+        color: #fff;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header__contact {
+        display: none;
+        list-style: none;
+        gap: 50px;
+    }
+    .header__logo {
+        width: 128px;
+        height: 56px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .contact {
+        height: 56px;
+        .contact__item {
+            display: table;
+            text-align: center;
+            a {
+                display: table-cell;
+                vertical-align: middle;
+                color: #fff !important;
+                font-size: 18px;
+                font-weight: 600;
+                border-width: 1px;
+                border-radius: 9px;
+                border-color: transparent;
+                border-style: solid;
+                transition: background-color 0.3s ease-in-out,
+                    color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+                padding: 0 15px;
+                &:hover {
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+    .social {
+        display: none;
+        gap: 15px;
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .menu-toggle {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+    }
+}
+// главная секция
+.main {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: block;
+        z-index: 2;
+    }
+    &__video {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: 1;
+    }
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        z-index: 3;
+    }
+    &__title {
+        color: var(--white-color);
+        font-size: 44px;
+        margin-bottom: 40px !important;
+    }
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        .nav-btns__item {
+            display: table;
+        }
+        .nav-btns__link {
+            display: table-cell;
+            vertical-align: middle;
+            color: #ffffff;
+            text-transform: uppercase;
+            background-color: #fe5001;
+            border-radius: 3px;
+            border-color: transparent;
+            border-width: 1px;
+            padding: 9px 18px 8px;
+            font-size: 13px;
+            transition: all 0.2s ease;
+            -webkit-transition: all 0.2s ease;
+            &:hover {
+                background-color: #f76b2a;
+            }
+        }
+    }
+}
