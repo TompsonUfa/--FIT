@@ -6,9 +6,14 @@
     --white-color: #fff;
     --title-font: "Montserrat", sans-serif;
     --title-font-weight: 800;
-    --text-font: "Roboto", sans-serif;
+    --text-font: "Exo 2", sans-serif;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 h1,
 h2,
 h3,
@@ -22,12 +27,29 @@ h6 {
 p,
 a {
     font-family: var(--text-font) !important;
+    margin-bottom: 0 !important;
 }
 a {
     text-decoration: none !important;
 }
 ul {
-    list-style: none;
     padding: 0 !important;
     margin: 0 !important;
+}
+strong {
+    font-weight: 700 !important;
+}
+.container {
+    max-width: 1200px !important;
+}
+.btn-primary {
+    background-color: var(--second-color) !important;
+    font-size: 17px !important;
+    border: none !important;
+    font-weight: 700 !important;
+    transition: all 0.2s ease !important;
+    -webkit-transition: all 0.2s ease !important;
+    &:hover {
+        background-color: #f76b2a !important;
+    }
 }
