@@ -1,4 +1,4 @@
 import './bootstrap';
-import './controlVideo';
+import './scroll';
 
 
