@@ -8,7 +8,19 @@
     --title-font-weight: 800;
     --text-font: "Exo 2", sans-serif;
 }
-
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1200px,
+);
+$accordion-icon-active-color: #fe5001;
+$accordion-icon-width: 40px;
+$accordion-icon-transform: rotate(45deg);
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 16 16' fill='currentColor' class='bi bi-plus-circle-fill'><path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}' class='bi bi-plus-circle-fill'><path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z'/></svg>");
+$carousel-control-color: #fe5001;
 * {
     padding: 0;
     margin: 0;
@@ -38,9 +50,6 @@ ul {
 }
 strong {
     font-weight: 700 !important;
-}
-.container {
-    max-width: 1200px !important;
 }
 .btn-primary {
     background-color: var(--second-color) !important;

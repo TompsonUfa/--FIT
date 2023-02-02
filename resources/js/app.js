@@ -1,3 +1,4 @@
-import './toggle-course';
 import './bootstrap';
+import './controlVideo';
+
 
