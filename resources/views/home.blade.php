@@ -869,7 +869,7 @@
             </div>
         </div>
     </div>
-    <div class="modal d-block" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2">
+    {{-- <div class="modal d-block" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close">
@@ -896,6 +896,13 @@
                                 <div class="btn answers__item">Тренажерный зал</div>
                                 <div class="btn answers__item">Групповые программы</div>
                                 <div class="btn answers__item">Детский фитнес</div>
+                                <div class="answers__item answers__item_input ">
+                                    <div class="wrapper-control ">
+                                        <input type="text" class="form-control" data-text-input
+                                            placeholder="Свой ответ" name="answers" maxlength="35">
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div class="questions__item">
@@ -903,8 +910,8 @@
                             <form class="form needs-validation">
                                 @csrf
                                 <div class="wrapper-control">
-                                    <input type="text" class="form-control" data-text-input placeholder="Имя" name="name"
-                                        maxlength="35">
+                                    <input type="text" class="form-control" data-text-input placeholder="Имя"
+                                        name="name" maxlength="35">
                                     <span class="wrapper-control__error">
                                         Пожалуйста, укажите свое Имя.
                                     </span>
@@ -917,8 +924,8 @@
                                     </span>
                                 </div>
                                 <span class="modal-politic text-white d-block mb-3">
-                                    Нажимая кнопку "Отправить" вы соглашаетесь с нашей <a href="/politika-konfidencialnosti"
-                                        target="_blank">
+                                    Нажимая кнопку "Отправить" вы соглашаетесь с нашей <a
+                                        href="/politika-konfidencialnosti" target="_blank">
                                         политикой
                                         конфиденциальности</a></span>
                                 <button type="submit" class="btn btn-primary btn-submit w-100">Отправить</button>
@@ -928,5 +935,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

@@ -9,23 +9,26 @@ class BotController extends Controller
     public function post(Request $request)
     {
         $token = "6137521058:AAEJ7LWRwRp2TcylMIWaCKI80oXpnbX01Sk";
-        $chat_id = "-828591039";
+        // $chat_id = "-828591039";
+        $chat_id = "-727668302";
 
-        $request->validate([
-            'name' => 'required|string|max:50',
-            'phone' => 'required|string|max:20',
-        ]);
-
-        $user = array(
-            'Имя: ' => $request->name,
-            'Телефон: ' => $request->phone
-        );
+        $data = $request->data;
 
         $txt = '';
-
-        foreach ($user as $key => $value) {
-            $txt .= "<b>" . $key . "</b> " . $value . "%0A";
-        };
+        foreach ($data as $key => $item) {
+            $txt .= "<b>" . $key . ":</b> " . $item . "%0A";
+            if (is_array($item)) {
+                foreach ($item as $key => $item) {
+                    if (is_array($item)) {
+                        foreach ($item as $key => $value) {
+                            $txt .= "<b>" . $key . ":</b> " . $value . "%0A";
+                        }
+                    } else {
+                        $txt .= $item . "%0A";
+                    }
+                }
+            }
+        }
 
         $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
 
