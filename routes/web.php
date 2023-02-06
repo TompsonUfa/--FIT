@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\BotController;
+use App\Http\Controllers\PollitikaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+Route::get('/', [MainController::class, 'show']);
+Route::post('/', [BotController::class, 'post']);
+
+// Route::get('/politika-konfidencialnosti', [PollitikaController::class, 'show']);

@@ -1,0 +1,883 @@
+p {
+    margin-bottom: 0;
+}
+.scroll-hidden {
+    overflow-y: hidden;
+}
+.title {
+    font-size: 41px;
+    line-height: 1.23;
+}
+.desc {
+    margin-top: 34px;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 300;
+    color: #000000;
+}
+// обертка шапки
+.wrapper-header {
+    position: absolute;
+    z-index: 500;
+    &_fixed {
+        position: fixed;
+        .header {
+            background-color: #000000ad;
+        }
+    }
+}
+// Шапка
+.header {
+    margin-top: 15px;
+    border-radius: 20px;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header__contact {
+        display: none;
+        list-style: none;
+        gap: 50px;
+    }
+    &__logo {
+        padding-top: 10px;
+        display: block;
+        width: 140px;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .contact {
+        height: 56px;
+        .contact__item {
+            display: table;
+            text-align: center;
+            a {
+                display: table-cell;
+                vertical-align: middle;
+                color: #fff !important;
+                font-size: 18px;
+                font-weight: 600;
+                border-width: 1px;
+                border-radius: 9px;
+                border-color: transparent;
+                border-style: solid;
+                transition: background-color 0.3s ease-in-out,
+                    color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+                padding: 0 15px;
+                &:hover {
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+    .social {
+        list-style: none;
+        display: none;
+        gap: 15px;
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .menu-toggle {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        svg {
+            pointer-events: none;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        .nav-btns__item {
+            display: table;
+        }
+        .nav-btns__link {
+            display: table-cell;
+            vertical-align: middle;
+            color: #ffffff;
+            text-transform: uppercase;
+            background-color: #fe5001;
+            border-radius: 3px;
+            border-color: transparent;
+            border-width: 1px;
+            padding: 8px 18px;
+            font-size: 13px;
+            transition: all 0.2s ease;
+            -webkit-transition: all 0.2s ease;
+            &:hover {
+                background-color: #f76b2a;
+            }
+        }
+    }
+}
+//основное по секции
+.section {
+    min-height: 100vh;
+    &__main {
+        height: 100vh;
+    }
+    &__info,
+    &__training,
+    &__reasons,
+    &__employment {
+        min-height: 100%;
+    }
+
+    &__header {
+        background-color: var(--first-color);
+        color: var(--white-color);
+        padding: 30px 0px;
+    }
+    &__content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__title {
+        font-size: 30px;
+        line-height: 1.23;
+        text-transform: uppercase;
+    }
+    &__desc {
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 1.5;
+        a {
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--white-color);
+        }
+    }
+    &__main {
+        padding: 0;
+    }
+    &__courses {
+        min-height: 100%;
+    }
+    &__reviews {
+        min-height: 100%;
+    }
+}
+// главная секция
+.main {
+    background-image: url("/public/images/about.jpg") center no-repeat;
+    background-size: cover;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: block;
+        z-index: 2;
+    }
+    &__video {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: 1;
+    }
+    &__content {
+        position: absolute;
+        padding-top: 115px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        z-index: 3;
+    }
+    &__title {
+        color: var(--white-color);
+        font-size: 55px;
+        position: absolute;
+        bottom: 100px;
+        span {
+            display: block;
+            width: 100%;
+            font-size: 98px;
+            font-family: var(--title-font) !important;
+            font-weight: var(--title-font-weight) !important;
+        }
+    }
+}
+// информационная секция
+.info {
+    background-color: var(--third-color);
+    &__text {
+        padding-right: 10px;
+    }
+    &__img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 0px;
+    }
+}
+// секция о нас
+.about {
+    &__img {
+        width: 100%;
+        height: 100%;
+        max-height: 800px;
+        object-fit: cover;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 0px;
+    }
+    &__text {
+        padding-left: 130px;
+    }
+    &__desc {
+        padding-bottom: 60px;
+        margin-bottom: 0;
+    }
+    &__btn {
+        padding: 15px 75px;
+    }
+}
+// секция направления
+.directions {
+    &__img {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 0px;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 800px;
+    }
+}
+// секция курсы
+.courses {
+    &__block {
+        padding: 20px;
+        background-color: #575757;
+        margin-bottom: 20px;
+    }
+    &__desc {
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.55;
+        font-weight: 600;
+    }
+}
+.course {
+    border-top: 1px solid #000000 !important;
+    &__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 1.35;
+        color: #000000 !important;
+        background-color: #fff !important;
+        box-shadow: none !important;
+        padding: 27px 10px !important;
+    }
+    &__content {
+        padding: 0px 10px 27px 10px;
+    }
+    &__desc,
+    &__list {
+        font-size: 18px;
+        line-height: 1.55;
+        font-weight: 300;
+    }
+    &__list {
+        padding-left: 20px !important;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        max-height: 800px;
+    }
+}
+// секция постеры
+.posters {
+    &__img {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 0px;
+        width: 100%;
+    }
+}
+// секция обучение
+.training {
+    &__img {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 0px;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+    &__desc {
+        font-size: 20px;
+        line-height: 1.55;
+        font-weight: 300;
+    }
+}
+// секция отзывы
+.employment {
+    &__item {
+        height: 500px;
+        object-fit: contain;
+    }
+}
+// секция 5 причин
+.reasons {
+    &__img {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 0px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+}
+// подвал (Контакты)
+.footer {
+    background-color: var(--third-color);
+    padding: 50px 0px;
+    &__title {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: var(--dark-color);
+    }
+    &__address {
+        padding-top: 20px;
+    }
+    &__address,
+    &__contact {
+        font-size: 17px;
+        line-height: 2;
+        font-weight: 600;
+    }
+}
+// банеры
+.banner {
+    padding: 20px;
+    background-color: #f5f5f5;
+    &__text {
+        font-size: 20px;
+        line-height: 1.55;
+        font-weight: 600;
+        color: var(--dark-color) !important;
+        padding-bottom: 10px;
+    }
+    &__btn {
+        padding: 10px 40px;
+        font-size: 20px;
+        font-family: var(--text-font) !important;
+    }
+}
+// боковое меню
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.623);
+    z-index: 800;
+    display: none;
+    opacity: 0;
+    &_visible {
+        display: flex;
+        opacity: 1;
+        animation: showMenu linear 0.3s;
+    }
+    &__container {
+        position: relative;
+        margin-left: auto;
+        width: 100%;
+        max-width: 350px;
+        background-color: #000000;
+        padding: 48px 40px 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        -webkit-transition: transform ease-in-out 0.3s;
+        -moz-transition: transform ease-in-out 0.3s;
+        -o-transition: transform ease-in-out 0.3s;
+        transition: transform ease-in-out 0.3s;
+        -moz-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        -webkit-transform: translate(100%, 0);
+        -o-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+        &_active {
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -webkit-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        margin-bottom: 15px;
+    }
+    &__link {
+        color: #ffffff;
+        font-size: 21px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        svg {
+            pointer-events: none;
+            transition: fill 0.3s ease;
+        }
+        &:hover {
+            svg {
+                fill: var(--second-color);
+            }
+        }
+    }
+    .social {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        .st0 {
+            transition: fill 0.3s ease;
+        }
+        &__item {
+            width: 30px;
+            &:hover {
+                .st0 {
+                    fill: var(--second-color);
+                }
+            }
+        }
+    }
+}
+// модельное окно с формой
+.modal-dialog {
+    max-width: 560px;
+    .modal-content {
+        position: relative;
+        background-color: #000000;
+        padding: 40px 45px;
+        .btn_close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            svg {
+                transition: all 0.3s ease;
+            }
+            &:hover {
+                svg {
+                    fill: var(--second-color);
+                }
+            }
+        }
+        .modal-title {
+            color: #ffffff;
+            margin-bottom: 11px;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 1.23;
+        }
+        .modal-desc {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.55;
+            font-weight: 300;
+        }
+        .wrapper-control {
+            &_invalid {
+                .wrapper-control__error {
+                    color: red;
+                    font-size: 15px;
+                    display: block;
+                    margin-top: 10px;
+                }
+                .form-control {
+                    border: 1px solid red;
+                }
+            }
+            &__error {
+                color: red;
+                font-size: 15px;
+                display: none;
+                margin-top: 10px;
+            }
+        }
+        .form-control {
+            color: #ffffff;
+            padding: 18px 15px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            border-radius: 0px;
+            border-bottom: 1px solid #fff;
+        }
+        .btn-submit {
+            height: 54px;
+        }
+        .modal-footer {
+            border-top: none;
+            text-align: center;
+            .modal-politic {
+                color: #fff;
+            }
+        }
+    }
+}
+// политика
+.politic {
+    padding: 50px;
+    &__content {
+        background-color: #f5f5f5;
+        padding: 60px;
+    }
+    &__title {
+        font-size: 28px;
+        line-height: 1.17;
+        padding-bottom: 35px;
+    }
+    &__subtitle,
+    &__desc,
+    &__list {
+        font-size: 20px;
+        line-height: 1.55;
+        padding-bottom: 35px;
+    }
+}
+@keyframes showMenu {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: flex;
+        opacity: 0;
+    }
+
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .title {
+        font-size: 30px;
+    }
+    .desc {
+        font-size: 18px;
+    }
+    //основное по секции
+    .section {
+        &__title {
+            font-size: 30px;
+        }
+        &__desc {
+            margin-top: 20px;
+            font-size: 18px;
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+    // Шапка
+    .header {
+        &__nav {
+            .nav-btns__link {
+                padding: 8px 10px;
+            }
+        }
+        .header__contact {
+            gap: 10px;
+        }
+    }
+    // главная
+    .main {
+        &__title {
+            font-size: 45px;
+        }
+    }
+    .info {
+        &__img {
+            height: 100%;
+            max-height: 700px;
+        }
+    }
+    // секция о нас
+    .about {
+        &__img {
+            max-height: 700px;
+        }
+        &__text {
+            padding-left: 25px;
+        }
+        &__desc {
+            padding-bottom: 40px;
+        }
+    }
+    // секция направления
+    .directions {
+        &__img {
+            max-height: 700px;
+        }
+    }
+    // секция курсы
+    .course {
+        &__desc,
+        &__list {
+            font-size: 17px;
+        }
+        &__img {
+            width: 100%;
+            height: 100%;
+            max-height: 650px;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .main {
+        &__title {
+            font-size: 35px;
+        }
+    }
+    .info {
+        &__desc {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+    .about {
+        &__text {
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        &__desc {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+    }
+    .directions {
+        &__desc {
+            margin-bottom: 20px;
+        }
+        &__img {
+            max-height: 460px;
+            object-fit: cover;
+        }
+    }
+    .courses {
+        &__desc {
+            font-size: 18px;
+        }
+    }
+    .course {
+        &__img {
+            object-fit: contain;
+        }
+    }
+    .banner {
+        &__text {
+            font-size: 18px;
+        }
+    }
+    .posters {
+        &__img {
+            box-shadow: none;
+            object-fit: contain;
+            max-height: 600px;
+        }
+        &__banner {
+            margin-top: 30px;
+        }
+    }
+    .employment {
+        &__item {
+            object-fit: cover;
+        }
+    }
+    .reasons {
+        &__desc {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .politic {
+        padding: 30px;
+        &__content {
+            padding: 30px;
+        }
+        &__title {
+            font-size: 20px;
+            padding-bottom: 30px;
+        }
+        &__subtitle,
+        &__desc,
+        &__list {
+            font-size: 17px;
+            padding-bottom: 30px;
+        }
+    }
+}
+@media screen and (max-width: 770px) {
+    .main {
+        &__title {
+            font-size: 30px;
+        }
+    }
+    .directions {
+        &__img {
+            max-height: 350px;
+        }
+    }
+    .training {
+        &__img {
+            max-height: 350px;
+        }
+    }
+    .politic {
+        padding: 30px;
+        &__content {
+            padding: 30px;
+        }
+        &__title {
+            font-size: 18px;
+            padding-bottom: 30px;
+        }
+        &__subtitle,
+        &__desc,
+        &__list {
+            font-size: 15px;
+            padding-bottom: 30px;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .title {
+        font-size: 25px;
+    }
+    .desc,
+    .btn {
+        font-size: 16px !important;
+    }
+    .section {
+        &__title {
+            font-size: 25px;
+        }
+        &__desc {
+            font-size: 16px;
+        }
+        &__content {
+            padding: 30px 20px 30px 20px;
+        }
+    }
+    .main {
+        &__title {
+            font-size: 25px;
+            bottom: 140px;
+            span {
+                font-size: 50px;
+            }
+        }
+    }
+    .courses {
+        &__desc {
+            font-size: 16px;
+        }
+    }
+    .course {
+        &__title {
+            text-transform: uppercase;
+            font-size: 17px;
+            line-height: 1.35;
+            color: #000000 !important;
+            background-color: #fff !important;
+            box-shadow: none !important;
+            padding: 27px 10px !important;
+        }
+        &__content {
+            padding: 0px 10px 27px 10px;
+        }
+        &__desc,
+        &__list {
+            font-size: 16px;
+            line-height: 1.55;
+            font-weight: 300;
+        }
+        &__img {
+            margin-top: 10px;
+            width: 100%;
+            height: 100%;
+            max-height: 800px;
+        }
+    }
+    .banner {
+        &__text {
+            font-size: 16px;
+        }
+    }
+    .posters {
+        &__img {
+            border: 1px solid #d0cfcf;
+        }
+    }
+    .politic {
+        padding: 15px;
+        &__content {
+            padding: 15px;
+        }
+        &__title {
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+        &__subtitle,
+        &__desc,
+        &__list {
+            font-size: 15px;
+            padding-bottom: 20px;
+        }
+    }
+    .footer {
+        padding: 50px 10px;
+        &__title {
+            font-size: 24px;
+        }
+        &__address {
+            padding-top: 20px;
+        }
+        &__address,
+        &__contact {
+            font-size: 17px;
+            line-height: 2;
+            font-weight: 600;
+        }
+    }
+}
+@media screen and (max-width: 368px) {
+    .main {
+        &__title {
+            font-size: 17px;
+            span {
+                font-size: 45px;
+            }
+        }
+    }
+}
