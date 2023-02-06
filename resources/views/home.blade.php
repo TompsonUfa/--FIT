@@ -869,4 +869,64 @@
             </div>
         </div>
     </div>
+    <div class="modal d-block" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-x" viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title mb-3" id="exampleModalLabel2">Ответьте на 3 вопроса</h4>
+                    <p class="modal-desc mb-3">Получите прямо сейчас Методичку по эффективному изучению анатомии</p>
+                    <div class="questions mb-3">
+                        <div class="questions__item">
+                            <h5 class="questions__title">1. Кто вы?</h5>
+                            <div class="answers">
+                                <div class="btn answers__item">Тренер</div>
+                                <div class="btn answers__item">Хочу стать тренером</div>
+                                <div class="btn answers__item">Веду здоровый образ жизни</div>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <h5 class="questions__title">2. Какое направление интересно?</h5>
+                            <div class="answers">
+                                <div class="btn answers__item">Тренажерный зал</div>
+                                <div class="btn answers__item">Групповые программы</div>
+                                <div class="btn answers__item">Детский фитнес</div>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <h5 class="questions__title">3. Ваши контакты?</h5>
+                            <form class="form needs-validation">
+                                @csrf
+                                <div class="wrapper-control">
+                                    <input type="text" class="form-control" data-text-input placeholder="Имя" name="name"
+                                        maxlength="35">
+                                    <span class="wrapper-control__error">
+                                        Пожалуйста, укажите свое Имя.
+                                    </span>
+                                </div>
+                                <div class="wrapper-control">
+                                    <input type="tel" class="form-control" data-tel-input placeholder="Телефон"
+                                        name="phone" maxlength="18">
+                                    <span class="wrapper-control__error">
+                                        Пожалуйста, укажите свой телефон.
+                                    </span>
+                                </div>
+                                <span class="modal-politic text-white d-block mb-3">
+                                    Нажимая кнопку "Отправить" вы соглашаетесь с нашей <a href="/politika-konfidencialnosti"
+                                        target="_blank">
+                                        политикой
+                                        конфиденциальности</a></span>
+                                <button type="submit" class="btn btn-primary btn-submit w-100">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
