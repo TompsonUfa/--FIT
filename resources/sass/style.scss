@@ -704,7 +704,7 @@ p {
     .info {
         &__desc {
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 20px !important;
         }
     }
     .about {
@@ -719,7 +719,7 @@ p {
     }
     .directions {
         &__desc {
-            margin-bottom: 20px;
+            margin-bottom: 20px !important;
         }
         &__img {
             max-height: 460px;
@@ -759,7 +759,7 @@ p {
     .reasons {
         &__desc {
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 20px !important;
         }
     }
     .politic {
