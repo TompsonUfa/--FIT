@@ -15,17 +15,15 @@ class BotController extends Controller
         $data = $request->data;
 
         $txt = '';
+
         foreach ($data as $key => $item) {
-            $txt .= "<b>" . $key . ":</b> " . $item . "%0A";
-            if (is_array($item)) {
-                foreach ($item as $key => $item) {
-                    if (is_array($item)) {
-                        foreach ($item as $key => $value) {
-                            $txt .= "<b>" . $key . ":</b> " . $value . "%0A";
-                        }
-                    } else {
-                        $txt .= $item . "%0A";
+            foreach ($item as $key => $item) {
+                if (is_array($item)) {
+                    foreach ($item as $key => $value) {
+                        $txt .= "<b>" . $key . ":</b> " . $value . "%0A";
                     }
+                } else {
+                    $txt .= $item . "%0A";
                 }
             }
         }

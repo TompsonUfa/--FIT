@@ -869,7 +869,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="modal d-block" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2">
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close">
@@ -933,7 +933,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 @endsection
