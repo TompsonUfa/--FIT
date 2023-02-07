@@ -9,8 +9,8 @@ class BotController extends Controller
     public function post(Request $request)
     {
         $token = "6137521058:AAEJ7LWRwRp2TcylMIWaCKI80oXpnbX01Sk";
-        // $chat_id = "-828591039";
-        $chat_id = "-727668302";
+        $chat_id = "-828591039";
+        // $chat_id = "-727668302";
 
         $data = $request->data;
 
