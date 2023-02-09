@@ -234,7 +234,7 @@
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item course">
                             <h2 class="accordion-header" id="flush-heading-1">
-                                <button class="accordion-button collapsed course__title" type="button"
+                                <button class="accordion-button collapsed accordion__title" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#flush-collapse-1" aria-expanded="false"
                                     aria-controls="flush-collapse-1">
                                     ИНСТРУКТОР ТРЕНАЖЕРНОГО ЗАЛА
@@ -242,10 +242,10 @@
                             </h2>
                             <div id="flush-collapse-1" class="accordion-collapse collapse "
                                 aria-labelledby="flush-heading-1" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body course__content">
+                                <div class="accordion-body accordion__content">
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 СТАРТ КУРСА 18 ФЕВРАЛЯ. ОТКРЫТ НАБОР!<br>
                                                 🔹 По окончанию курсов выдается диплом государственного образца!
                                                 <br>
@@ -255,7 +255,7 @@
                                                 🔸 Теоретический блок:
                                                 <br>
                                             </p>
-                                            <ul class="course__list">
+                                            <ul class="accordion__list">
                                                 <li>Анатомия</li>
                                                 <li>Физиология</li>
                                                 <li>Биохимия</li>
@@ -263,10 +263,10 @@
                                                 <li>Тренинг по продажам услуг</li>
                                             </ul>
                                             <br>
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 🔸 Практический блок:
                                             </p>
-                                            <ul class="course__list">
+                                            <ul class="accordion__list">
                                                 <li>Теория и методика персонального тренинга</li>
                                                 <li>Силовая подготовка</li>
                                                 <li>Развитие гибкости</li>
@@ -277,7 +277,7 @@
                                             </ul>
                                             <br>
 
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 Кому будет полезен данный курс?<br>
                                                 - начинающим тренерам<br>
                                                 - практикующим тренерам для расширения профессионального профиля<br>
@@ -293,7 +293,7 @@
                                         </div>
                                         <div class="col-12 col-lg-6">
                                             <img src="/images/posters/3.jpg" alt="ИНСТРУКТОР ТРЕНАЖЕРНОГО ЗАЛА"
-                                                class="course__img">
+                                                class="accordion__img">
                                         </div>
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@
                         </div>
                         <div class="accordion-item course">
                             <h2 class="accordion-header" id="flush-heading-2">
-                                <button class="accordion-button collapsed course__title" type="button"
+                                <button class="accordion-button collapsed accordion__title" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#flush-collapse-2" aria-expanded="false"
                                     aria-controls="flush-collapse-2">
                                     ИНСТРУКТОР ДЕТСКОГО ФИТНЕСА
@@ -309,10 +309,10 @@
                             </h2>
                             <div id="flush-collapse-2" class="accordion-collapse collapse "
                                 aria-labelledby="flush-heading-2" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body course__content">
+                                <div class="accordion-body accordion__content">
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 СТАРТ КУРСА 18 ФЕВРАЛЯ. ОТКРЫТ НАБОР!<br>
                                                 🔹 По окончанию курса выдается диплом государственного образца!
                                                 <br>
@@ -322,16 +322,16 @@
                                                 🔸 Базовая теория:
                                                 <br>
                                             </p>
-                                            <ul class="course__list">
+                                            <ul class="accordion__list">
                                                 <li>Функциональная анатомия</li>
                                                 <li>Нормальная и спортивная физиология</li>
                                                 <li>Контроль здоровья клиента, первая доврачебная помощь</li>
                                             </ul>
                                             <br>
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 🔸 Практический блок:
                                             </p>
-                                            <ul class="course__list">
+                                            <ul class="accordion__list">
                                                 <li>Особенности физического и психического развития детей. Физические
                                                     качества
                                                     (онлайн/ офлайн лекция. Теория по профилю)</li>
@@ -352,7 +352,7 @@
                                                     мышечной силы, ловкости с использованием различного оборудования</li>
                                             </ul>
                                             <br>
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 Кому будет полезен данный курс?<br>
                                                 - начинающим тренерам<br>
                                                 - практикующим тренерам для расширения профессионального профиля<br>
@@ -367,7 +367,7 @@
                                         </div>
                                         <div class="col-12 col-lg-6">
                                             <img src="/images/posters/1.jpg" alt="ИНСТРУКТОР ДЕТСКОГО ФИТНЕСА"
-                                                class="course__img">
+                                                class="accordion__img">
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +375,7 @@
                         </div>
                         <div class="accordion-item course">
                             <h2 class="accordion-header" id="flush-heading-3">
-                                <button class="accordion-button collapsed course__title" type="button"
+                                <button class="accordion-button collapsed accordion__title" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#flush-collapse-3" aria-expanded="false"
                                     aria-controls="flush-collapse-3">
                                     ИНСТРУКТОР ГРУППОВЫХ ПРОГРАММ
@@ -383,10 +383,10 @@
                             </h2>
                             <div id="flush-collapse-3" class="accordion-collapse collapse"
                                 aria-labelledby="flush-heading-3" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body course__content">
+                                <div class="accordion-body accordion__content">
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 СТАРТ КУРСА 18 ФЕВРАЛЯ. ОТКРЫТ НАБОР!<br>
                                                 🔹 По окончанию курсов выдается диплом государственного образца!
                                                 <br>
@@ -396,7 +396,7 @@
                                                 🔸 Теоретический блок:
                                                 <br>
                                             </p>
-                                            <ul class="course__list">
+                                            <ul class="accordion__list">
                                                 <li>Анатомия</li>
                                                 <li>Физиология</li>
                                                 <li>Биохимия</li>
@@ -405,10 +405,10 @@
                                                 <li>Профессиональный сервис с правовыми основами</li>
                                             </ul>
                                             <br>
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 🔸 Практический блок:
                                             </p>
-                                            <ul class="course__list">
+                                            <ul class="accordion__list">
                                                 <li>Теория и методика построения и проведения групповых занятий</li>
                                                 <li>Аэробика (классическая, силовая, стрейтчинг)</li>
                                                 <li>Степ-аэробика</li>
@@ -420,7 +420,7 @@
                                             </ul>
                                             <br>
 
-                                            <p class="course__desc">
+                                            <p class="accordion__desc">
                                                 Кому будет полезен данный курс?<br>
                                                 - начинающим тренерам<br>
                                                 - практикующим тренерам для расширения профессионального профиля<br>
@@ -435,7 +435,7 @@
                                         </div>
                                         <div class="col-12 col-lg-6">
                                             <img src="/images/posters/2.jpg" alt="ИНСТРУКТОР ГРУППОВЫХ ПРОГРАММ"
-                                                class="course__img">
+                                                class="accordion__img">
                                         </div>
                                     </div>
 
@@ -517,6 +517,61 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <img src="/images/training2.jpg" alt="сертификаты" class="training__img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section__teachers teachers" id="teachers">
+        <div class="container-fluid section__header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section__title">Преподаватели</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container section__content">
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item teacher">
+                            <h2 class="accordion-header" id="flush-heading-1">
+                                <button class="accordion-button collapsed accordion__title" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse-1" aria-expanded="false"
+                                    aria-controls="flush-collapse-2">
+                                    Виктория Борисовна Крутько
+                                </button>
+                            </h2>
+                            <div id="flush-collapse-1" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-1" data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion__content">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <p class="accordion__desc">
+                                                Руководитель школы фитнеса, Заведующий кафедры теории и методики сложнокоординационных и циклических видов спорта
+                                            </p>
+                                            <h3 class="accordion__subtitle">Образование</h3>
+                                            <p class="accordion__desc">
+                                                Уфимский Государственный Профессионально-Педагогический колледж (с отличием), специальность- учитель ФК и специалист по спорту.	Башкирский государственный Университет им.М.Аккмуллы, (с отличием) факультет физической культуры.
+                                            </p>
+                                            <h3 class="accordion__subtitle">Достижения:</h3>
+                                            <ul class="accordion__list">
+                                                <li>Кандидат педагогических наук, доцент </li>
+                                                <li>КМС по русской лапте</li>
+                                                <li>«Лучший работник физической культуры и спорта Республики Башкортостан»</li>
+                                                <li>Автор более 70 научных работ в области физической культуры и спорта</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <img src="/images/teachers/3.jpg" alt="Виктория Борисовна Крутько"
+                                                class="accordion__img teacher__img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -778,7 +833,7 @@
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">
+                    <a href="#teachers" class="menu__link">
                         Преподаватели
                     </a>
                 </li>

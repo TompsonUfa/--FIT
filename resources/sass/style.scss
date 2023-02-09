@@ -274,7 +274,7 @@ p {
         font-weight: 600;
     }
 }
-.course {
+.accordion {
     border-top: 1px solid #000000 !important;
     &__title {
         text-transform: uppercase;
@@ -284,6 +284,10 @@ p {
         background-color: #fff !important;
         box-shadow: none !important;
         padding: 27px 10px !important;
+    }
+    &__subtitle{
+        font-size: 18px;
+        padding: 10px 0px;
     }
     &__content {
         padding: 0px 10px 27px 10px;
