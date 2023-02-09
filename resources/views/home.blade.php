@@ -536,36 +536,358 @@
                 <div class="col-12">
                     <div class="accordion accordion-flush" id="accordionExample">
                         <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="flush-heading-1">
+                            <h2 class="accordion-header" id="teacher-heading-1">
                                 <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse-1" aria-expanded="false"
-                                    aria-controls="flush-collapse-2">
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-1" aria-expanded="false"
+                                    aria-controls="teacher-collapse-1">
                                     Виктория Борисовна Крутько
                                 </button>
                             </h2>
-                            <div id="flush-collapse-1" class="accordion-collapse collapse"
-                                aria-labelledby="flush-heading-1" data-bs-parent="#accordionExample">
+                            <div id="teacher-collapse-1" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-1" data-bs-parent="#accordionExample">
                                 <div class="accordion-body accordion__content">
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc">
-                                                Руководитель школы фитнеса, Заведующий кафедры теории и методики сложнокоординационных и циклических видов спорта
+                                            <p class="accordion__desc fst-italic">
+                                                Руководитель школы фитнеса, Заведующий кафедры теории и методики
+                                                сложнокоординационных и циклических видов спорта
                                             </p>
                                             <h3 class="accordion__subtitle">Образование</h3>
                                             <p class="accordion__desc">
-                                                Уфимский Государственный Профессионально-Педагогический колледж (с отличием), специальность- учитель ФК и специалист по спорту.	Башкирский государственный Университет им.М.Аккмуллы, (с отличием) факультет физической культуры.
+                                                Уфимский Государственный Профессионально-Педагогический колледж (с
+                                                отличием), специальность- учитель ФК и специалист по спорту. Башкирский
+                                                государственный Университет им.М.Аккмуллы, (с отличием) факультет физической
+                                                культуры.
                                             </p>
                                             <h3 class="accordion__subtitle">Достижения:</h3>
                                             <ul class="accordion__list">
                                                 <li>Кандидат педагогических наук, доцент </li>
                                                 <li>КМС по русской лапте</li>
-                                                <li>«Лучший работник физической культуры и спорта Республики Башкортостан»</li>
+                                                <li>«Лучший работник физической культуры и спорта Республики Башкортостан»
+                                                </li>
                                                 <li>Автор более 70 научных работ в области физической культуры и спорта</li>
                                             </ul>
                                         </div>
+                                        <div
+                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                            <div class="wrapper-img">
+                                                <img src="/images/teachers/krutko.jpg" alt="Виктория Борисовна Крутько"
+                                                    class="accordion__img teacher__img"
+                                                    style="scale: 3;object-position: 71% 70px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item teacher">
+                            <h2 class="accordion-header" id="teacher-heading-2">
+                                <button class="accordion-button collapsed accordion__title" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-2" aria-expanded="false"
+                                    aria-controls="teacher-collapse-2">
+                                    Анисимов Степан Владимирович
+                                </button>
+                            </h2>
+                            <div id="teacher-collapse-2" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-2" data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion__content">
+                                    <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <img src="/images/teachers/3.jpg" alt="Виктория Борисовна Крутько"
-                                                class="accordion__img teacher__img">
+                                            <p class="accordion__desc fst-italic">
+                                                Методист школы фитнеса, практикующий персональный тренер, инструктор
+                                                групповых программ
+                                            </p>
+                                            <h3 class="accordion__subtitle">Образование</h3>
+                                            <p class="accordion__desc">
+                                                Высшее физкультурное образование ("БИФК")
+                                            </p>
+                                            <h3 class="accordion__subtitle">Достижения:</h3>
+                                            <ul class="accordion__list">
+                                                <li>2 взрослый разряд по пауэрлифтингу</li>
+                                                <li>опыт работы в фитнесе более 8 лет</li>
+                                                <li>преподавательский опыт более 5 лет</li>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                            <div class="wrapper-img">
+                                                <img src="/images/teachers/anisimov.jpeg"
+                                                    alt="Анисимов Степан Владимирович" class="accordion__img teacher__img"
+                                                    style="scale: 2; object-position: -4px 21px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item teacher">
+                            <h2 class="accordion-header" id="teacher-heading-3">
+                                <button class="accordion-button collapsed accordion__title" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-3" aria-expanded="false"
+                                    aria-controls="teacher-collapse-3">
+                                    Охлюев Евгений Викторович
+                                </button>
+                            </h2>
+                            <div id="teacher-collapse-3" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-3" data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion__content">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <p class="accordion__desc fst-italic">
+                                                Старший тренер сборной РБ по пауэрлифтингу (жим лежа), тренер сборной УГНТУ
+                                                по пауэрлифтингу.
+                                                Директор МБУ «Спортивная школа №22» Администрации ГО г.Уфа
+                                            </p>
+                                            <h3 class="accordion__subtitle">Образование</h3>
+                                            <p class="accordion__desc">
+                                                Уфимский Государственный Профессионально-Педагогический колледж (с
+                                                отличием), специальность- учитель ФК и специалист по спорту. Башкирский
+                                                государственный Университет им.М.Аккмуллы, (с отличием) факультет физической
+                                                культуры.
+                                            </p>
+                                            <h3 class="accordion__subtitle">Достижения:</h3>
+                                            <ul class="accordion__list">
+                                                <li>Почетный знак «Лучший тренер Республики Башкортостан» </li>
+                                                <li>Диплом лауреата регионального этапа конкурса «Лучший детский тренер
+                                                    страны»</li>
+                                                <li>Мастер спорта России по пауэрлифтингу</li>
+                                                <li>Вице – президент федерации пауэрлифтинга Республики Башкортостан,
+                                                    старший тренер Республики Башкортостан по жиму лежа</li>
+                                                <li>Неоднократный призер всероссийских и республиканских соревнований по
+                                                    пауэрлифтингу и жиму лежа. Обладатель Кубка России по жиму лежа 2015года
+                                                </li>
+                                                <li>Подготовил 2 МСМК по пауэрлифтингу, 20 МС России, более 30 КМС и более
+                                                    90 спортсменов массовых разрядов по пауэрлифтингу. Подготовил чемпиона
+                                                    Мира и Европы по жиму лежа среди юниоров взрослых 2017,2018,2019гг.
+                                                    Савельева Егора, а также многих призеров всероссийских соревнований</li>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                            <div class="wrapper-img">
+                                                <img src="/images/teachers/oxluev.jpeg" alt="Охлюев Евгений Викторович"
+                                                    class="accordion__img teacher__img"
+                                                    style="scale: 1; object-position: 0% -25px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item teacher">
+                            <h2 class="accordion-header" id="teacher-heading-4">
+                                <button class="accordion-button collapsed accordion__title" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-4" aria-expanded="false"
+                                    aria-controls="teacher-collapse-4">
+                                    Холостяков Андрей Викторович
+                                </button>
+                            </h2>
+                            <div id="teacher-collapse-4" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion__content">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <p class="accordion__desc fst-italic">
+                                                Методист Школы Фитнеса
+                                            </p>
+                                            <h3 class="accordion__subtitle">Образование</h3>
+                                            <ul class="accordion__list">
+                                                <li>Башкирский институт физической культуры (филиал) ФГБОУ ВО “Урал ГУФК”,
+                                                    Факультет: тренерско-преподавательский Специальность: Специалист по
+                                                    физической культуре и спорту по специальности “Физическая культура и
+                                                    спорт”</li>
+                                                <li>Башкирский институт физической культуры (филиал) ФГБОУ ВО “Урал ГУФК”,
+                                                    Специальность: Адаптивная физическая культура</li>
+                                            </ul>
+                                            <h3 class="accordion__subtitle">Достижения:</h3>
+                                            <ul class="accordion__list">
+                                                <li>Мастер Спорта Международного класса</li>
+                                                <li>Финалист паралимпийских игр в Пекине 2008 г.</li>
+                                                <li>Призер кубка мира 2009 г.</li>
+                                                <li>Многократный чемпион и призер чемпионатов России</li>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                            <div class="wrapper-img">
+                                                <img src="/images/teachers/holostakov.jpeg"
+                                                    alt="Холостяков Андрей Викторович" class="accordion__img teacher__img"
+                                                    style="scale: 1; object-position: 0% -25px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item teacher">
+                            <h2 class="accordion-header" id="teacher-heading-5">
+                                <button class="accordion-button collapsed accordion__title" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-5" aria-expanded="false"
+                                    aria-controls="teacher-collapse-5">
+                                    Омарова Рина Маратовна
+                                </button>
+                            </h2>
+                            <div id="teacher-collapse-5" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-5" data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion__content">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <p class="accordion__desc fst-italic">
+                                                Методист Школы Фитнеса, преподаватель кафедры теории и методики сложно
+                                                координационных и циклических видов спорта «БИФК»
+                                            </p>
+                                            <h3 class="accordion__subtitle">Образование</h3>
+                                            <p class="accordion__desc">
+                                                Уфимский Государственный Профессионально-Педагогический колледж (с
+                                                отличием), специальность- учитель ФК и специалист по спорту. Башкирский
+                                                государственный Университет им.М.Аккмуллы, (с отличием) факультет физической
+                                                культуры.
+                                            </p>
+                                            <h3 class="accordion__subtitle">Достижения:</h3>
+                                            <ul class="accordion__list">
+                                                <li>Кандидат в мастера спорта по Спортивным бальным танцам, танцор
+                                                    международного класса , победитель и призёр многих Всероссийских и
+                                                    международных соревнований </li>
+                                                <li>Сертифицированный нутрициолог</li>
+                                                <li>Сертифицированный инструктором групповых программ и персонального
+                                                    тренинга</li>
+                                                <li>Стаж преподавательской деятельности и работы в сфере фитнеса составляет
+                                                    - 9 лет</li>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                            <div class="wrapper-img">
+                                                <img src="/images/teachers/omarova.jpg" alt="Омарова Рина Маратовна"
+                                                    class="accordion__img teacher__img"
+                                                    style="scale: 1; object-position: -17px -2px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item teacher">
+                            <h2 class="accordion-header" id="teacher-heading-6">
+                                <button class="accordion-button collapsed accordion__title" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-6" aria-expanded="false"
+                                    aria-controls="teacher-collapse-6">
+                                    Исмаил Селин Генановна
+                                </button>
+                            </h2>
+                            <div id="teacher-collapse-6" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-6" data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion__content">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <p class="accordion__desc fst-italic">
+                                                Преподаватель кафедры теории и методики сложно координационных и циклических
+                                                видов спорта «БИФК».
+                                            </p>
+                                            <h3 class="accordion__subtitle">Образование</h3>
+                                            <p class="accordion__desc">
+                                                Диплом о высшем образовании в сфере физической культуры и опыт работы в
+                                                фитнес индустрии (или тренерский стаж) более 5 лет.
+                                            </p>
+                                            <h3 class="accordion__subtitle">Достижения:</h3>
+                                            <ul class="accordion__list">
+                                                <li>Мастер спорта по спортивной аэробике</li>
+                                                <li>Двукратный серебряный призер первенства России</li>
+                                                <li>Многократный победитель и призер всероссийских и республиканских
+                                                    соревнований по спортивной аэробике</li>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                            <div class="wrapper-img">
+                                                <img src="/images/teachers/ismail.jpeg" alt="Исмаил Селин Генановна"
+                                                    class="accordion__img teacher__img"
+                                                    style="scale: 1.5; object-position: 18px 18px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item teacher">
+                            <h2 class="accordion-header" id="teacher-heading-7">
+                                <button class="accordion-button collapsed accordion__title" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-7" aria-expanded="false"
+                                    aria-controls="teacher-collapse-7">
+                                    Фатхетдинова Гульназ Рафисовна
+                                </button>
+                            </h2>
+                            <div id="teacher-collapse-7" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-7" data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion__content">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <p class="accordion__desc fst-italic">
+                                                Преподаватель «БИФК», преподаватель школы фитнеса по направлениям: Пилатес,
+                                                МФР, Стретчинг.
+                                            </p>
+                                            <h3 class="accordion__subtitle">Образование</h3>
+                                            <ul class="accordion__list">
+                                                <li>«КамГИФК»- специалист по ФК и спорту , инструктор ЛФК</li>
+                                                <li>Wellness компания Велком г.Москва : „Веллнес тренировка при изменениях
+                                                    осанки“, „Функциональная анатомия “, „Релакс тренинг”, „Веллнес
+                                                    тренировка при межпозвонковых грыжах“, „Функциональная групповая
+                                                    тренировка“,
+                                                    „Функциональная анатомия, миофасциальное расслабление , кинезитерапия.
+                                                    Верхняя конечность“</li>
+                                                <li>Академия Wellness г.Москва „Функциональная тренировка“</li>
+                                                <li>Международный сертификат “Пилатес в пост реабилитации”</li>
+                                                <li>Институт соматического движения и обучения Брайна Ингла. «Введение в
+                                                    соматику Ханны», «Базовый тренинг по соматике Ханны» </li>
+                                                <li>"Пилатес-реформер", Виль Шайнуров</li>
+                                                <li>Федерация фитнес-аэробики FISAF „Персональный тренер“</li>
+                                                <li>Обучающий центр Анатомия : „Стопы“ техника и упражнения в 3D , „ТБС и
+                                                    ягодицы” практика тренировки в 3D</li>
+                                                <li>Rehabscience : „Сколиоз ”, „Правильная двигательная стимуляция в фитнесе
+                                                    и реабилитации”
+                                                </li>
+                                                <li>WellFitness training compani : „Нейрофитнес. Соматический подход в
+                                                    фитнес тренировке“, „Stretching updated“</li>
+                                                <li>Coach club “Rumbler Roller” базовый курс</li>
+                                                <li>Ортодинамика Авторская школа Фиделя Субботина: семинар «Миофасциальные
+                                                    цепи. Биомеханика . Диагностика. Лечение» «Терапевтическое тейпирование.
+                                                    Базовый курс.»</li>
+                                                <li>Обучающий центр Практика:
+                                                    Gateway studio - 1,2,3
+                                                </li>
+                                                <li>Академия кинезиологии Л.Ф.Васильевой - курс «Кинезиофитнес»</li>
+                                                <li>Art of motion academy ( Швейцария) «Анатомические поезда в движении»,
+                                                    «Основы слингов», «Слинги - 1, 2»</li>
+                                            </ul>
+                                            <h3 class="accordion__subtitle">Достижения:</h3>
+                                            <ul class="accordion__list">
+                                                <li>Мастер спорта по спортивной гимнастике, абсолютная чемпионка республики
+                                                    Татарстан, призер и победитель Всероссийских соревнований</li>
+                                                <li>2003-2023гг. преподаватель кафедры сложно координационных и зрелищных
+                                                    видов спорта БашИФК</li>
+                                                <li>Сертифицированный тренер</li>
+                                                <li>Преподавательский стаж - 24 года</li>
+                                            </ul>
+                                            <h3 class="accordion__subtitle">Опыт работы:</h3>
+                                            <ul class="accordion__list">
+                                                <li>1999 - 2003 гг. Фитнес центр „Лидер” г. Набережные Челны</li>
+                                                <li>2004 - 2005 г. Фитнес центр „Аврора” г.Уфа - координатор групповых
+                                                    программ</li>
+                                                <li>2006 - 2018гг. Международная сеть фитнес клубов „ World class“ г.Уфа -
+                                                    инструктор групповых программ, основатель и координатор направления
+                                                    Kinezio</li>
+                                                <li>2022 г. Открытие своей студии Пилатеса</li>
+                                                <li>Опыт работы сфере фитнеса - 24 года</li>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                            <div class="wrapper-img">
+                                                <img src="/images/teachers/fathedinova.jpeg"
+                                                    alt="Фатхетдинова Гульназ Рафисовна"
+                                                    class="accordion__img teacher__img"
+                                                    style="scale: 1.5; object-position: -43px -19px;">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -285,7 +285,7 @@ p {
         box-shadow: none !important;
         padding: 27px 10px !important;
     }
-    &__subtitle{
+    &__subtitle {
         font-size: 18px;
         padding: 10px 0px;
     }
@@ -328,6 +328,20 @@ p {
         font-size: 20px;
         line-height: 1.55;
         font-weight: 300;
+    }
+}
+// секция преподаватели
+.teacher {
+    .wrapper-img {
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 4px solid #fe5001;
+    }
+    &__img {
+        object-fit: cover;
+        border-radius: 50%;
     }
 }
 // секция отзывы
@@ -782,6 +796,7 @@ p {
             padding-bottom: 30px;
         }
     }
+    // секция преподаватели
 }
 @media screen and (max-width: 770px) {
     .main {
@@ -916,7 +931,7 @@ p {
             font-weight: 600;
         }
     }
-    .modal-content{
+    .modal-content {
         padding: 20px !important;
     }
     .modal-title,
