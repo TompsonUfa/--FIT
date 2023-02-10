@@ -1117,7 +1117,11 @@
             <p class="footer__contact">
                 Подробности и запись на курсы:<br>
                 Телефон: <a href="tel:+79375810088">+7 (937) 581-00-88</a> Степан Анисимов<br>
-                Email: <a href="mailto:o-fitschool@mail.ru">o-fitschool@mail.ru</a>
+                Email: <a href="mailto:o-fitschool@mail.ru">o-fitschool@mail.ru</a><br>
+                ИП Горбатова Вера Константиновна<br>
+                ИНН: 165113742290<br>
+                ОГРНИП: 322169000210158<br>
+                Сайт не является публичной офертой и носит информационный характер
             </p>
         </div>
     </footer>
@@ -1173,6 +1177,9 @@
                     <a href="#footer" class="menu__link">
                         Контакты
                     </a>
+                </li>
+                <li class="menu__item">
+                    <a href="tel:+79375810088" class="menu__link">+7 (937) 581-00-88</a>
                 </li>
             </ul>
             <ul class="menu__social social">

@@ -4,5 +4,5 @@ document.addEventListener('DOMContentLoaded', function(){
         modal = bootstrap.Modal.getOrCreateInstance(modal);
         modal.show()
 };
-setTimeout(showModal, 5000);
+setTimeout(showModal, 15000);
 });

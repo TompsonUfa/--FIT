@@ -22,4 +22,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class, 'show']);
 Route::post('/', [BotController::class, 'post']);
 
-// Route::get('/politika-konfidencialnosti', [PollitikaController::class, 'show']);
+Route::get('/politika-konfidencialnosti', [PollitikaController::class, 'show']);
