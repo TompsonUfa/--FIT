@@ -1144,7 +1144,8 @@
                     </p>
                 </div>
                 <div class="col-12 col-lg-6 mb-3">
-                    <img src="/images/reasons.jpg" alt="5 ПРИЧИН ОБУЧАТЬСЯ В НАШЕЙ ШКОЛЕ ФИТНЕСА" class="reasons__img">
+                    <img src="/images/studenty-shkoly-fitnesa-i-anisimov-stepan.webp"
+                        alt="Студенты школы фитнеса и Анисимов Степан" class="reasons__img">
                 </div>
                 <div class="col-12 banner">
                     <p class="banner__text">Узнать подробности или записаться на курс</p>
