@@ -131,7 +131,7 @@
                     </p>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <img src="/images/info.jpg" alt="ШКОЛА ФИТНЕСА «O-FIT»" class="info__img">
+                    <img src="/images/studenty-shkoly-fitnesa.webp" alt="Студенты школы фитнеса" class="info__img">
                 </div>
             </div>
         </div>
@@ -140,7 +140,8 @@
         <div class="container section__content">
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <img src="/images/about.jpg" class="about__img" alt="Коротко о школе фитнеса">
+                    <img src="/images/obuchenie-na-fitnes-trenera.webp" class="about__img"
+                        alt="Обучение на фитнес тренера">
                 </div>
                 <div class="col-12 col-lg-6 about__text">
                     <h2 class="title about__title">КОРОТКО О ШКОЛЕ ФИТНЕСА</h2>
@@ -212,7 +213,8 @@
                     </p>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <img src="/images/directions.jpg" alt="Направления" class="directions__img">
+                    <img src="/images/shkola-fitnesa-dlya-trenerov-i-instruktorov.webp"
+                        alt="Школа фитнеса для тренеров и инструкторов" class="directions__img">
                 </div>
             </div>
         </div>
@@ -291,8 +293,8 @@
                                             </p>
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <img src="/images/posters/3.jpg" alt="ИНСТРУКТОР ТРЕНАЖЕРНОГО ЗАЛА"
-                                                class="accordion__img">
+                                            <img src="/images/posters/instruktor-trenazhernogo-zala.webp"
+                                                alt="Инструтор тренажерного зала" class="accordion__img">
                                         </div>
                                     </div>
                                 </div>
@@ -365,8 +367,8 @@
                                             </p>
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <img src="/images/posters/1.jpg" alt="ИНСТРУКТОР ДЕТСКОГО ФИТНЕСА"
-                                                class="accordion__img">
+                                            <img src="/images/posters/instruktor-detskogo-fitnesa.webp"
+                                                alt="Инструктор детского фитнеса" class="accordion__img">
                                         </div>
                                     </div>
                                 </div>
@@ -433,8 +435,8 @@
                                             </p>
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <img src="/images/posters/2.jpg" alt="ИНСТРУКТОР ГРУППОВЫХ ПРОГРАММ"
-                                                class="accordion__img">
+                                            <img src="/images/posters/instruktor-gruppovyh-programm.webp"
+                                                alt="Инструктор групповых программ" class="accordion__img">
                                         </div>
                                     </div>
 
@@ -477,14 +479,14 @@
         <div class="container section__content">
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <img class="posters__img mb-4" src="/images/posters/1.jpg" alt="Постер инструктор детского фитнеса">
-                    <img class="posters__img mb-4" src="/images/posters/3.jpg" alt="Постер инструктор тренажерного зала">
-
+                    <img class="posters__img mb-4" src="/images/posters/instruktor-detskogo-fitnesa.webp"
+                        alt="Инструктор детского фитнеса">
+                    <img class="posters__img mb-4" src="/images/posters/instruktor-trenazhernogo-zala.webp"
+                        alt="Инструтор тренажерного зала">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <img class="posters__img mb-4" src="/images/posters/2.jpg"
-                        alt="Постер инструктор групповых программ">
-
+                    <img class="posters__img mb-4" src="/images/posters/instruktor-gruppovyh-programm.webp"
+                        alt="Инструктор групповых программ">
                 </div>
                 <div class="col-12 banner posters__banner">
                     <p class="banner__text">Узнать подробности или записаться на мероприятие</p>
@@ -512,10 +514,12 @@
         <div class="container section__content">
             <div class="row">
                 <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                    <img src="/images/training.jpg" alt="ученица" class="training__img">
+                    <img src="/images/provoditsya-zaniyatie-v-fitnes-shkole.webp" alt="Проводятся занятия в фитнес школе"
+                        class="training__img">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <img src="/images/training2.jpg" alt="сертификаты" class="training__img">
+                    <img src="/images/sertifikat-uchastnika-master-klassa.webp" alt="Сертификат участника мастер класса"
+                        class="training__img">
                 </div>
             </div>
         </div>
@@ -570,8 +574,8 @@
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img src="/images/teachers/krutko.jpg" alt="Виктория Борисовна Крутько"
-                                                    class="accordion__img teacher__img"
+                                                <img src="/images/teachers/vypuskniki-shkoly-fitnesa.webp"
+                                                    alt="Выпускники школы фитнеса" class="accordion__img teacher__img"
                                                     style="scale: 3;object-position: 71% 70px;">
                                             </div>
                                         </div>
@@ -610,8 +614,9 @@
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img src="/images/teachers/anisimov.jpeg"
-                                                    alt="Анисимов Степан Владимирович" class="accordion__img teacher__img"
+                                                <img src="/images/teachers/anisimov-stepan-prepodavatel-shkoly-fitnesa.webp"
+                                                    alt="Антисимов Степан - препродаватель школы фитнеса"
+                                                    class="accordion__img teacher__img"
                                                     style="scale: 2; object-position: -4px 21px;">
                                             </div>
                                         </div>
@@ -664,7 +669,8 @@
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img src="/images/teachers/oxluev.jpeg" alt="Охлюев Евгений Викторович"
+                                                <img src="/images/teachers/ohlyuev-evgenij-prepodavatel-shkoly-fitnesa.webp"
+                                                    alt="Охлюев Евгений - препродаватель школы фитнеса"
                                                     class="accordion__img teacher__img"
                                                     style="scale: 1; object-position: 0% -25px;">
                                             </div>
@@ -709,8 +715,9 @@
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img src="/images/teachers/holostakov.jpeg"
-                                                    alt="Холостяков Андрей Викторович" class="accordion__img teacher__img"
+                                                <img src="/images/teachers/holostyakov-andrej-prepodavatel-shkoly-fitnesa.webp"
+                                                    alt="Холостяков Андрей - препродаватель школы фитнеса"
+                                                    class="accordion__img teacher__img"
                                                     style="scale: 1; object-position: 0% -25px;">
                                             </div>
                                         </div>
@@ -757,7 +764,8 @@
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img src="/images/teachers/omarova.jpg" alt="Омарова Рина Маратовна"
+                                                <img src="/images/teachers/omarova-rina-prepodavatel-shkoly-fitnesa.webp"
+                                                    alt="Омарова Рина - препродаватель школы фитнеса"
                                                     class="accordion__img teacher__img"
                                                     style="scale: 1; object-position: -17px -2px;">
                                             </div>
@@ -799,7 +807,8 @@
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img src="/images/teachers/ismail.jpeg" alt="Исмаил Селин Генановна"
+                                                <img src="/images/teachers/ismail-selin-prepodavatel-shkoly-fitnesa.webp"
+                                                    alt="Исмаил Селин - препродаватель школы фитнеса"
                                                     class="accordion__img teacher__img"
                                                     style="scale: 1.5; object-position: 18px 18px;">
                                             </div>
@@ -882,8 +891,8 @@
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img src="/images/teachers/fathedinova.jpeg"
-                                                    alt="Фатхетдинова Гульназ Рафисовна"
+                                                <img src="/images/teachers/fathetdinova-gulnaz-prepodavatel-shkoly-fitnesa.webp"
+                                                    alt="Фатхетдинова Гульназ - препродаватель школы фитнеса"
                                                     class="accordion__img teacher__img"
                                                     style="scale: 1.5; object-position: -43px -19px;">
                                             </div>
@@ -924,127 +933,166 @@
                             <div class="carousel-inner carousel-inner_multi">
                                 <div class="carousel-item active">
                                     <div class="row">
-                                        <div class="col-12 col-md-6"><img src="/images/graduates/0.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
-                                        <div class="col-12 col-md-6"><img src="/images/graduates/1.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-12 col-md-6"><img
+                                                src="/images/graduates/shkola-fitnesa-o-fit-ufa.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Школа фитнеса О ФИТ город Уфа"></div>
+                                        <div class="col-12 col-md-6"><img
+                                                src="/images/graduates/na-baze-bashkirskogo-instituta-fizicheskoj-kultury.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="На базе Башкирского Института Физической Культуры"></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="/images/graduates/2.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
-                                        <div class="col-md-6"><img src="/images/graduates/3.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/povyshenie-kvalifikacii-praktikuyushchego-trenera.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Повышение квалификации практикующего тренера"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/obuchaem-na-instruktora-detskogo-fitnesa.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Обучаем на инструтора детского фитнеса"></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="/images/graduates/4.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
-                                        <div class="col-md-6"><img src="/images/graduates/5.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/rasshirenie-trenerskogo-profilya.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Расширение тренерского профиля"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/dlya-ehffektivnyh-samostoyatelnyh-trenirovok.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Для эффективных самостоятельных тренировок"></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="/images/graduates/6.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
-                                        <div class="col-md-6"><img src="/images/graduates/7.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-md-6"><img src="/images/graduates/viktoriya-stepan-i-gulnaz.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Препрдаватели школы фитнеса О-ФИТ город Уфа"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/rukovoditel-shkoly-fitnesa-viktoriya.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Руководитель школы фитнеса Виктория Крутько"></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="/images/graduates/8.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
-                                        <div class="col-md-6"><img src="/images/graduates/9.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/studenty-shkoly-fitnesa-i-anisimov-stepan.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Студенты школы фитнеса и Анисимов Степан"></div>
+                                        <div class="col-md-6"><img src="/images/graduates/auditoriya-shkoly-fitnesa.webp"
+                                                class="d-block w-100 employment__item" alt="Аудитория школы фитнеса">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="/images/graduates/10.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
-                                        <div class="col-md-6"><img src="/images/graduates/11.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/kak-prohodyat-trenirovki-v-shkole-fitnesa.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Как проходят тренировки в школе фитнеса"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/kak-prohodit-praktika-v-shkole-fitnesa.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Как проходит практика в школе фитнеса"></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="/images/graduates/12.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
-                                        <div class="col-md-6"><img src="/images/graduates/13.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/zanyatiya-provodyatsya-pod-kontrolem-prepodavatelya.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Занятия проводятся под контролем преподавателя"></div>
+                                        <div class="col-md-6"><img
+                                                src="/images/graduates/obuchenie-na-trenera-gruppovyh-programm.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Обучение на тренера групповых программ"></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-md-12"><img src="/images/graduates/14.jpg"
-                                                class="d-block w-100 employment__item" alt="слайд школа фитнеса"></div>
+                                        <div class="col-md-12"><img
+                                                src="/images/graduates/diplom-gosudarstvennogo-obrazca.webp"
+                                                class="d-block w-100 employment__item"
+                                                alt="Диплом государственного образца"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-inner carousel-inner_solo">
                                 <div class="carousel-item active">
-                                    <img src="/images/graduates/0.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/shkola-fitnesa-o-fit-ufa.webp"
+                                        class="d-block w-100 employment__item" alt="Школа фитнеса О ФИТ город Уфа">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/1.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/na-baze-bashkirskogo-instituta-fizicheskoj-kultury.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="На базе Башкирского Института Физической Культуры">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/2.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/povyshenie-kvalifikacii-praktikuyushchego-trenera.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Повышение квалификации практикующего тренера">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/3.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/obuchaem-na-instruktora-detskogo-fitnesa.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Обучаем на инструтора детского фитнеса">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/4.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/rasshirenie-trenerskogo-profilya.webp"
+                                        class="d-block w-100 employment__item" alt="Расширение тренерского профиля">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/5.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/dlya-ehffektivnyh-samostoyatelnyh-trenirovok.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Для эффективных самостоятельных тренировок">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/6.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/viktoriya-stepan-i-gulnaz.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Препрдаватели школы фитнеса О-ФИТ город Уфа">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/7.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/rukovoditel-shkoly-fitnesa-viktoriya.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Руководитель школы фитнеса Виктория Крутько">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/8.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/studenty-shkoly-fitnesa-i-anisimov-stepan.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Студенты школы фитнеса и Анисимов Степан">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/9.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/auditoriya-shkoly-fitnesa.webp"
+                                        class="d-block w-100 employment__item" alt="Аудитория школы фитнеса">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/10.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/kak-prohodyat-trenirovki-v-shkole-fitnesa.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Как проходят тренировки в школе фитнеса">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/11.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/kak-prohodit-praktika-v-shkole-fitnesa.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Как проходит практика в школе фитнеса">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/12.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/zanyatiya-provodyatsya-pod-kontrolem-prepodavatelya.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Занятия проводятся под контролем преподавателя">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/13.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/obuchenie-na-trenera-gruppovyh-programm.webp"
+                                        class="d-block w-100 employment__item"
+                                        alt="Обучение на тренера групповых программ">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/graduates/14.jpg" class="d-block w-100 employment__item"
-                                        alt="слайд школа фитнеса">
+                                    <img src="/images/graduates/diplom-gosudarstvennogo-obrazca.webp"
+                                        class="d-block w-100 employment__item" alt="Диплом государственного образца">
                                 </div>
                             </div>
                         </div>
