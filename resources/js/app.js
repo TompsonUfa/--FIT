@@ -6,5 +6,5 @@ import './toggle-answer'
 import './input';
 import './show-modal'
 import './post-form';
-
+import './lazy';
 
