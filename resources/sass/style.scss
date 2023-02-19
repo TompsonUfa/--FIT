@@ -661,6 +661,44 @@ p {
         }
     }
 }
+
+// панель администратора
+.sidebar{
+    background-color: #212529;
+    height: 100vh;
+    &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 150px;
+            height: 150px;
+        } 
+    }
+    &__nav{ 
+        border-top: 1px solid var(--white-color);
+        padding: 35px !important;
+        flex-direction: column;
+    }
+    .nav {
+        &__item{
+            transition: all 0.2s linear;
+            &:hover{
+                background-color: var(--second-color);
+            }
+            &_active{
+                background-color: var(--second-color);
+            }
+        }
+        &__link{
+            text-transform: uppercase;
+            padding: 10px 15px !important;
+            display: block;
+            color: var(--white-color);    
+        }
+    }
+}
+
 @keyframes showMenu {
     0% {
         display: none;
