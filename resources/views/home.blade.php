@@ -485,12 +485,18 @@
                 <div class="col-12 col-lg-6">
                     <img class="posters__img mb-4" data-src="/images/posters/instruktor-detskogo-fitnesa.webp"
                         src="/images/lazy.png" alt="Инструктор детского фитнеса">
+                </div>
+                <div class="col-12 col-lg-6">
                     <img class="posters__img mb-4" data-src="/images/posters/instruktor-trenazhernogo-zala.webp"
                         src="/images/lazy.png" alt="Инструтор тренажерного зала">
                 </div>
                 <div class="col-12 col-lg-6">
                     <img class="posters__img mb-4" data-src="/images/posters/instruktor-gruppovyh-programm.webp"
                         src="/images/lazy.png" alt="Инструктор групповых программ">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img class="posters__img mb-4" data-src="/images/posters/prodvijenie-fintes-trenera.webp"
+                        src="/images/lazy.png" alt="Продвижение фитнес тренера">
                 </div>
                 <div class="col-12 banner posters__banner">
                     <p class="banner__text">Узнать подробности или записаться на мероприятие</p>
