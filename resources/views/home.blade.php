@@ -235,216 +235,32 @@
             <div class="row">
                 <div class="col-12">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
+                        @foreach ($courses as $course)
                         <div class="accordion-item course">
-                            <h2 class="accordion-header" id="flush-heading-1">
+                            <h2 class="accordion-header" id="flush-heading-{{$loop->iteration}}">
                                 <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse-1" aria-expanded="false"
-                                    aria-controls="flush-collapse-1">
-                                    ИНСТРУКТОР ТРЕНАЖЕРНОГО ЗАЛА
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{$loop->iteration}}" aria-expanded="false"
+                                    aria-controls="flush-collapse-{{$loop->iteration}}">
+                                    {{$course['title']}}
                                 </button>
                             </h2>
-                            <div id="flush-collapse-1" class="accordion-collapse collapse "
-                                aria-labelledby="flush-heading-1" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapse-{{$loop->iteration}}" class="accordion-collapse collapse "
+                                aria-labelledby="flush-heading-{{$loop->iteration}}" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body accordion__content">
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc">
-                                                СТАРТ КУРСА 18 ФЕВРАЛЯ. ОТКРЫТ НАБОР!<br>
-                                                🔹 По окончанию курсов выдается диплом государственного образца!
-                                                <br>
-                                                <br>
-                                                <strong>ПРОГРАММА КУРСА:</strong>
-                                                <br>
-                                                🔸 Теоретический блок:
-                                                <br>
-                                            </p>
-                                            <ul class="accordion__list">
-                                                <li>Анатомия</li>
-                                                <li>Физиология</li>
-                                                <li>Биохимия</li>
-                                                <li>Контроль здоровья клиентов</li>
-                                                <li>Тренинг по продажам услуг</li>
-                                            </ul>
-                                            <br>
-                                            <p class="accordion__desc">
-                                                🔸 Практический блок:
-                                            </p>
-                                            <ul class="accordion__list">
-                                                <li>Теория и методика персонального тренинга</li>
-                                                <li>Силовая подготовка</li>
-                                                <li>Развитие гибкости</li>
-                                                <li>Тренировки на выносливость</li>
-                                                <li>Функциональный тренинг</li>
-                                                <li>Планирование тренировочного процесса клиента</li>
-                                                <li>Проведение стартовых тренировок</li>
-                                            </ul>
-                                            <br>
-
-                                            <p class="accordion__desc">
-                                                Кому будет полезен данный курс?<br>
-                                                - начинающим тренерам<br>
-                                                - практикующим тренерам для расширения профессионального профиля<br>
-                                                - любителям фитнеса для самостоятельных тренировок<br>
-                                                <br>
-                                                🔹 <strong>Период обучения:</strong> старт курса 18 февраля 2023г., 10
-                                                недель<br>
-                                                🔹 Обучение проходит на базе Башкирского института физической культуры;<br>
-                                                🔹 Практика проводится на базе СК «Динамо»<br>
-                                                📞 <strong>Подробности и запись</strong> по тел.: +7 (937) 581-00-88
-                                            </p>
+                                            {!!$course['text']!!}
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <img data-src="/images/posters/instruktor-trenazhernogo-zala.webp"
-                                                src="/images/lazy.png" alt="Инструтор тренажерного зала"
+                                            <img data-src="/images/posters/{{$course['img']}}"
+                                                src="/images/lazy.png" alt="{{$course['title']}}"
                                                 class="accordion__img">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item course">
-                            <h2 class="accordion-header" id="flush-heading-2">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse-2" aria-expanded="false"
-                                    aria-controls="flush-collapse-2">
-                                    ИНСТРУКТОР ДЕТСКОГО ФИТНЕСА
-                                </button>
-                            </h2>
-                            <div id="flush-collapse-2" class="accordion-collapse collapse "
-                                aria-labelledby="flush-heading-2" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc">
-                                                СТАРТ КУРСА 18 ФЕВРАЛЯ. ОТКРЫТ НАБОР!<br>
-                                                🔹 По окончанию курса выдается диплом государственного образца!
-                                                <br>
-                                                <br>
-                                                <strong>ПРОГРАММА КУРСА:</strong>
-                                                <br>
-                                                🔸 Базовая теория:
-                                                <br>
-                                            </p>
-                                            <ul class="accordion__list">
-                                                <li>Функциональная анатомия</li>
-                                                <li>Нормальная и спортивная физиология</li>
-                                                <li>Контроль здоровья клиента, первая доврачебная помощь</li>
-                                            </ul>
-                                            <br>
-                                            <p class="accordion__desc">
-                                                🔸 Практический блок:
-                                            </p>
-                                            <ul class="accordion__list">
-                                                <li>Особенности физического и психического развития детей. Физические
-                                                    качества
-                                                    (онлайн/ офлайн лекция. Теория по профилю)</li>
-                                                <li>Методика построения и проведения занятий, дозировка (время тренировки)
-                                                </li>
-                                                <li>Дети 3-6 лет. Занятия, направленные на коррекцию и профилактику
-                                                    плоскостопия,
-                                                    сколиоза, формирование осанки</li>
-                                                <li>Дети 3-6 лет – занятия, направленные на развитие физических качеств
-                                                    через
-                                                    подвижные игры</li>
-                                                <li>Дети 7-10 лет. Занятия, направленные на укрепление ОДА, профилактику
-                                                    сколиоза,
-                                                    подвижности суставов, профилактики травматизма, рациональное развитие
-                                                    всех
-                                                    физических качеств</li>
-                                                <li>Дети 11-14 лет - занятия направленные на развитие координации, гибкости,
-                                                    мышечной силы, ловкости с использованием различного оборудования</li>
-                                            </ul>
-                                            <br>
-                                            <p class="accordion__desc">
-                                                Кому будет полезен данный курс?<br>
-                                                - начинающим тренерам<br>
-                                                - практикующим тренерам для расширения профессионального профиля<br>
-                                                <br>
-                                                🔹 <strong>Период обучения:</strong> старт курса 18 февраля 2023г., 10
-                                                недель<br>
-                                                🔹 Обучение проходит на базе Башкирского института физической культуры;<br>
-                                                🔹 Практика проводится на базе СК «Динамо»<br>
-                                                📞 <strong>Подробности и запись</strong> по тел.: +7 (937) 581-00-88
-                                            </p>
-                                        </div>
-                                        <div class="col-12 col-lg-6">
-                                            <img data-src="/images/posters/instruktor-detskogo-fitnesa.webp"
-                                                src="/images/lazy.png" alt="Инструктор детского фитнеса"
-                                                class="accordion__img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item course">
-                            <h2 class="accordion-header" id="flush-heading-3">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse-3" aria-expanded="false"
-                                    aria-controls="flush-collapse-3">
-                                    ИНСТРУКТОР ГРУППОВЫХ ПРОГРАММ
-                                </button>
-                            </h2>
-                            <div id="flush-collapse-3" class="accordion-collapse collapse"
-                                aria-labelledby="flush-heading-3" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc">
-                                                СТАРТ КУРСА 18 ФЕВРАЛЯ. ОТКРЫТ НАБОР!<br>
-                                                🔹 По окончанию курсов выдается диплом государственного образца!
-                                                <br>
-                                                <br>
-                                                <strong>ПРОГРАММА КУРСА:</strong>
-                                                <br>
-                                                🔸 Теоретический блок:
-                                                <br>
-                                            </p>
-                                            <ul class="accordion__list">
-                                                <li>Анатомия</li>
-                                                <li>Физиология</li>
-                                                <li>Биохимия</li>
-                                                <li>Контроль здоровья клиентов</li>
-                                                <li>Тренинг по продажам услуг</li>
-                                                <li>Профессиональный сервис с правовыми основами</li>
-                                            </ul>
-                                            <br>
-                                            <p class="accordion__desc">
-                                                🔸 Практический блок:
-                                            </p>
-                                            <ul class="accordion__list">
-                                                <li>Теория и методика построения и проведения групповых занятий</li>
-                                                <li>Аэробика (классическая, силовая, стрейтчинг)</li>
-                                                <li>Степ-аэробика</li>
-                                                <li>Функциональные тренировки</li>
-                                                <li>BOSU треннинг</li>
-                                                <li>Фит-бол</li>
-                                                <li>Бодискульпт</li>
-                                                <li>HIIT</li>
-                                            </ul>
-                                            <br>
-
-                                            <p class="accordion__desc">
-                                                Кому будет полезен данный курс?<br>
-                                                - начинающим тренерам<br>
-                                                - практикующим тренерам для расширения профессионального профиля<br>
-                                                <br>
-                                                🔹 <strong>Период обучения:</strong> старт курса 18 февраля 2023г., 10
-                                                недель<br>
-                                                🔹 Обучение проходит на базе Башкирского института физической культуры;<br>
-                                                🔹 Практика проводится на базе СК «Динамо»<br>
-                                                📞 <strong>Подробности и запись</strong> по тел.: +7 (937) 581-00-88
-                                            </p>
-                                        </div>
-                                        <div class="col-12 col-lg-6">
-                                            <img data-src="/images/posters/instruktor-gruppovyh-programm.webp"
-                                                src="/images/lazy.png" alt="Инструктор групповых программ"
-                                                class="accordion__img">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="courses__block">
                         <p class="courses__desc">ТАКЖЕ, мы проводим внутриклубное обучение для фитнес-центров.<br>
@@ -480,22 +296,12 @@
         </div>
         <div class="container section__content">
             <div class="row">
-                <div class="col-12 col-lg-6">
-                    <img class="posters__img mb-4" data-src="/images/posters/instruktor-detskogo-fitnesa.webp"
-                        src="/images/lazy.png" alt="Инструктор детского фитнеса">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <img class="posters__img mb-4" data-src="/images/posters/instruktor-trenazhernogo-zala.webp"
-                        src="/images/lazy.png" alt="Инструтор тренажерного зала">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <img class="posters__img mb-4" data-src="/images/posters/instruktor-gruppovyh-programm.webp"
-                        src="/images/lazy.png" alt="Инструктор групповых программ">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <img class="posters__img mb-4" data-src="/images/posters/prodvijenie-fintes-trenera.webp"
-                        src="/images/lazy.png" alt="Продвижение фитнес тренера">
-                </div>
+                @foreach ($posters as $poster)
+                    <div class="col-12 col-lg-6">
+                        <img class="posters__img mb-4" data-src="/images/posters/{{$poster['img']}}"
+                            src="/images/lazy.png" alt="{{$poster['name']}}">
+                    </div>
+                @endforeach
                 <div class="col-12 banner posters__banner">
                     <p class="banner__text">Узнать подробности или записаться на мероприятие</p>
                     <div class="btn btn-primary banner__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -546,376 +352,35 @@
             <div class="row">
                 <div class="col-12">
                     <div class="accordion accordion-flush" id="accordionExample">
+                        @foreach ($teachers as $teacher)
                         <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-1">
+                            <h2 class="accordion-header" id="teacher-heading-{{$loop->iteration}}">
                                 <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-1" aria-expanded="false"
-                                    aria-controls="teacher-collapse-1">
-                                    Виктория Борисовна Крутько
+                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-{{$loop->iteration}}" aria-expanded="false"
+                                    aria-controls="teacher-collapse-{{$loop->iteration}}">
+                                    {{$teacher['fullName']}}
                                 </button>
                             </h2>
-                            <div id="teacher-collapse-1" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-1" data-bs-parent="#accordionExample">
+                            <div id="teacher-collapse-{{$loop->iteration}}" class="accordion-collapse collapse"
+                                aria-labelledby="teacher-heading-{{$loop->iteration}}" data-bs-parent="#accordionExample">
                                 <div class="accordion-body accordion__content">
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc fst-italic">
-                                                Руководитель школы фитнеса, Заведующий кафедры теории и методики
-                                                сложнокоординационных и циклических видов спорта
-                                            </p>
-                                            <h3 class="accordion__subtitle">Образование</h3>
-                                            <p class="accordion__desc">
-                                                Уфимский Государственный Профессионально-Педагогический колледж (с
-                                                отличием), специальность- учитель ФК и специалист по спорту. Башкирский
-                                                государственный Университет им.М.Аккмуллы, (с отличием) факультет физической
-                                                культуры.
-                                            </p>
-                                            <h3 class="accordion__subtitle">Достижения:</h3>
-                                            <ul class="accordion__list">
-                                                <li>Кандидат педагогических наук, доцент </li>
-                                                <li>КМС по русской лапте</li>
-                                                <li>«Лучший работник физической культуры и спорта Республики Башкортостан»
-                                                </li>
-                                                <li>Автор более 70 научных работ в области физической культуры и спорта</li>
-                                            </ul>
+                                            {!!$teacher['text']!!}
                                         </div>
                                         <div
                                             class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                             <div class="wrapper-img">
-                                                <img data-src="/images/teachers/vypuskniki-shkoly-fitnesa.webp"
-                                                    src="/images/lazy.png" alt="Выпускники школы фитнеса"
-                                                    class="accordion__img teacher__img"
-                                                    style="scale: 3;object-position: 71% 70px;">
+                                                <img data-src="/images/teachers/{{$teacher['img']}}"
+                                                    src="/images/lazy.png" alt="{{$teacher['fullName']}}"
+                                                    class="accordion__img teacher__img">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-2">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-2" aria-expanded="false"
-                                    aria-controls="teacher-collapse-2">
-                                    Анисимов Степан Владимирович
-                                </button>
-                            </h2>
-                            <div id="teacher-collapse-2" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-2" data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc fst-italic">
-                                                Методист школы фитнеса, практикующий персональный тренер, инструктор
-                                                групповых программ
-                                            </p>
-                                            <h3 class="accordion__subtitle">Образование</h3>
-                                            <p class="accordion__desc">
-                                                Высшее физкультурное образование ("БИФК")
-                                            </p>
-                                            <h3 class="accordion__subtitle">Достижения:</h3>
-                                            <ul class="accordion__list">
-                                                <li>2 взрослый разряд по пауэрлифтингу</li>
-                                                <li>опыт работы в фитнесе более 8 лет</li>
-                                                <li>преподавательский опыт более 5 лет</li>
-                                            </ul>
-                                        </div>
-                                        <div
-                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
-                                            <div class="wrapper-img">
-                                                <img data-src="/images/teachers/anisimov-stepan-prepodavatel-shkoly-fitnesa.webp"
-                                                    src="/images/lazy.png"
-                                                    alt="Антисимов Степан - препродаватель школы фитнеса"
-                                                    class="accordion__img teacher__img"
-                                                    style="scale: 2; object-position: -4px 21px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-3">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-3" aria-expanded="false"
-                                    aria-controls="teacher-collapse-3">
-                                    Охлюев Евгений Викторович
-                                </button>
-                            </h2>
-                            <div id="teacher-collapse-3" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-3" data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc fst-italic">
-                                                Старший тренер сборной РБ по пауэрлифтингу (жим лежа), тренер сборной УГНТУ
-                                                по пауэрлифтингу.
-                                                Директор МБУ «Спортивная школа №22» Администрации ГО г.Уфа
-                                            </p>
-                                            <h3 class="accordion__subtitle">Образование</h3>
-                                            <p class="accordion__desc">
-                                                Уфимский Государственный Профессионально-Педагогический колледж (с
-                                                отличием), специальность- учитель ФК и специалист по спорту. Башкирский
-                                                государственный Университет им.М.Аккмуллы, (с отличием) факультет физической
-                                                культуры.
-                                            </p>
-                                            <h3 class="accordion__subtitle">Достижения:</h3>
-                                            <ul class="accordion__list">
-                                                <li>Почетный знак «Лучший тренер Республики Башкортостан» </li>
-                                                <li>Диплом лауреата регионального этапа конкурса «Лучший детский тренер
-                                                    страны»</li>
-                                                <li>Мастер спорта России по пауэрлифтингу</li>
-                                                <li>Вице – президент федерации пауэрлифтинга Республики Башкортостан,
-                                                    старший тренер Республики Башкортостан по жиму лежа</li>
-                                                <li>Неоднократный призер всероссийских и республиканских соревнований по
-                                                    пауэрлифтингу и жиму лежа. Обладатель Кубка России по жиму лежа 2015года
-                                                </li>
-                                                <li>Подготовил 2 МСМК по пауэрлифтингу, 20 МС России, более 30 КМС и более
-                                                    90 спортсменов массовых разрядов по пауэрлифтингу. Подготовил чемпиона
-                                                    Мира и Европы по жиму лежа среди юниоров взрослых 2017,2018,2019гг.
-                                                    Савельева Егора, а также многих призеров всероссийских соревнований</li>
-                                            </ul>
-                                        </div>
-                                        <div
-                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
-                                            <div class="wrapper-img">
-                                                <img data-src="/images/teachers/ohlyuev-evgenij-prepodavatel-shkoly-fitnesa.webp"
-                                                    src="/images/lazy.png"
-                                                    alt="Охлюев Евгений - препродаватель школы фитнеса"
-                                                    class="accordion__img teacher__img"
-                                                    style="scale: 1; object-position: 0% -25px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-4">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-4" aria-expanded="false"
-                                    aria-controls="teacher-collapse-4">
-                                    Холостяков Андрей Викторович
-                                </button>
-                            </h2>
-                            <div id="teacher-collapse-4" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-4" data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc fst-italic">
-                                                Методист Школы Фитнеса
-                                            </p>
-                                            <h3 class="accordion__subtitle">Образование</h3>
-                                            <ul class="accordion__list">
-                                                <li>Башкирский институт физической культуры (филиал) ФГБОУ ВО “Урал ГУФК”,
-                                                    Факультет: тренерско-преподавательский Специальность: Специалист по
-                                                    физической культуре и спорту по специальности “Физическая культура и
-                                                    спорт”</li>
-                                                <li>Башкирский институт физической культуры (филиал) ФГБОУ ВО “Урал ГУФК”,
-                                                    Специальность: Адаптивная физическая культура</li>
-                                            </ul>
-                                            <h3 class="accordion__subtitle">Достижения:</h3>
-                                            <ul class="accordion__list">
-                                                <li>Мастер Спорта Международного класса</li>
-                                                <li>Финалист паралимпийских игр в Пекине 2008 г.</li>
-                                                <li>Призер кубка мира 2009 г.</li>
-                                                <li>Многократный чемпион и призер чемпионатов России</li>
-                                            </ul>
-                                        </div>
-                                        <div
-                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
-                                            <div class="wrapper-img">
-                                                <img data-src="/images/teachers/holostyakov-andrej-prepodavatel-shkoly-fitnesa.webp"
-                                                    src="/images/lazy.png"
-                                                    alt="Холостяков Андрей - препродаватель школы фитнеса"
-                                                    class="accordion__img teacher__img"
-                                                    style="scale: 1; object-position: 0% -25px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-5">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-5" aria-expanded="false"
-                                    aria-controls="teacher-collapse-5">
-                                    Омарова Рина Маратовна
-                                </button>
-                            </h2>
-                            <div id="teacher-collapse-5" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-5" data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc fst-italic">
-                                                Методист Школы Фитнеса, преподаватель кафедры теории и методики сложно
-                                                координационных и циклических видов спорта «БИФК»
-                                            </p>
-                                            <h3 class="accordion__subtitle">Образование</h3>
-                                            <p class="accordion__desc">
-                                                Уфимский Государственный Профессионально-Педагогический колледж (с
-                                                отличием), специальность- учитель ФК и специалист по спорту. Башкирский
-                                                государственный Университет им.М.Аккмуллы, (с отличием) факультет физической
-                                                культуры.
-                                            </p>
-                                            <h3 class="accordion__subtitle">Достижения:</h3>
-                                            <ul class="accordion__list">
-                                                <li>Кандидат в мастера спорта по Спортивным бальным танцам, танцор
-                                                    международного класса , победитель и призёр многих Всероссийских и
-                                                    международных соревнований </li>
-                                                <li>Сертифицированный нутрициолог</li>
-                                                <li>Сертифицированный инструктором групповых программ и персонального
-                                                    тренинга</li>
-                                                <li>Стаж преподавательской деятельности и работы в сфере фитнеса составляет
-                                                    - 9 лет</li>
-                                            </ul>
-                                        </div>
-                                        <div
-                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
-                                            <div class="wrapper-img">
-                                                <img data-src="/images/teachers/omarova-rina-prepodavatel-shkoly-fitnesa.webp"
-                                                    src="/images/lazy.png"
-                                                    alt="Омарова Рина - препродаватель школы фитнеса"
-                                                    class="accordion__img teacher__img"
-                                                    style="scale: 1; object-position: -17px -2px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-6">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-6" aria-expanded="false"
-                                    aria-controls="teacher-collapse-6">
-                                    Исмаил Селин Генановна
-                                </button>
-                            </h2>
-                            <div id="teacher-collapse-6" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-6" data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc fst-italic">
-                                                Преподаватель кафедры теории и методики сложно координационных и циклических
-                                                видов спорта «БИФК».
-                                            </p>
-                                            <h3 class="accordion__subtitle">Образование</h3>
-                                            <p class="accordion__desc">
-                                                Диплом о высшем образовании в сфере физической культуры и опыт работы в
-                                                фитнес индустрии (или тренерский стаж) более 5 лет.
-                                            </p>
-                                            <h3 class="accordion__subtitle">Достижения:</h3>
-                                            <ul class="accordion__list">
-                                                <li>Мастер спорта по спортивной аэробике</li>
-                                                <li>Двукратный серебряный призер первенства России</li>
-                                                <li>Многократный победитель и призер всероссийских и республиканских
-                                                    соревнований по спортивной аэробике</li>
-                                            </ul>
-                                        </div>
-                                        <div
-                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
-                                            <div class="wrapper-img">
-                                                <img data-src="/images/teachers/ismail-selin-prepodavatel-shkoly-fitnesa.webp"
-                                                    src="/images/lazy.png"
-                                                    alt="Исмаил Селин - препродаватель школы фитнеса"
-                                                    class="accordion__img teacher__img"
-                                                    style="scale: 1.5; object-position: 18px 18px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-7">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-7" aria-expanded="false"
-                                    aria-controls="teacher-collapse-7">
-                                    Фатхетдинова Гульназ Рафисовна
-                                </button>
-                            </h2>
-                            <div id="teacher-collapse-7" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-7" data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <p class="accordion__desc fst-italic">
-                                                Преподаватель «БИФК», преподаватель школы фитнеса по направлениям: Пилатес,
-                                                МФР, Стретчинг.
-                                            </p>
-                                            <h3 class="accordion__subtitle">Образование</h3>
-                                            <ul class="accordion__list">
-                                                <li>«КамГИФК»- специалист по ФК и спорту , инструктор ЛФК</li>
-                                                <li>Wellness компания Велком г.Москва : „Веллнес тренировка при изменениях
-                                                    осанки“, „Функциональная анатомия “, „Релакс тренинг”, „Веллнес
-                                                    тренировка при межпозвонковых грыжах“, „Функциональная групповая
-                                                    тренировка“,
-                                                    „Функциональная анатомия, миофасциальное расслабление , кинезитерапия.
-                                                    Верхняя конечность“</li>
-                                                <li>Академия Wellness г.Москва „Функциональная тренировка“</li>
-                                                <li>Международный сертификат “Пилатес в пост реабилитации”</li>
-                                                <li>Институт соматического движения и обучения Брайна Ингла. «Введение в
-                                                    соматику Ханны», «Базовый тренинг по соматике Ханны» </li>
-                                                <li>"Пилатес-реформер", Виль Шайнуров</li>
-                                                <li>Федерация фитнес-аэробики FISAF „Персональный тренер“</li>
-                                                <li>Обучающий центр Анатомия : „Стопы“ техника и упражнения в 3D , „ТБС и
-                                                    ягодицы” практика тренировки в 3D</li>
-                                                <li>Rehabscience : „Сколиоз ”, „Правильная двигательная стимуляция в фитнесе
-                                                    и реабилитации”
-                                                </li>
-                                                <li>WellFitness training compani : „Нейрофитнес. Соматический подход в
-                                                    фитнес тренировке“, „Stretching updated“</li>
-                                                <li>Coach club “Rumbler Roller” базовый курс</li>
-                                                <li>Ортодинамика Авторская школа Фиделя Субботина: семинар «Миофасциальные
-                                                    цепи. Биомеханика . Диагностика. Лечение» «Терапевтическое тейпирование.
-                                                    Базовый курс.»</li>
-                                                <li>Обучающий центр Практика:
-                                                    Gateway studio - 1,2,3
-                                                </li>
-                                                <li>Академия кинезиологии Л.Ф.Васильевой - курс «Кинезиофитнес»</li>
-                                                <li>Art of motion academy ( Швейцария) «Анатомические поезда в движении»,
-                                                    «Основы слингов», «Слинги - 1, 2»</li>
-                                            </ul>
-                                            <h3 class="accordion__subtitle">Достижения:</h3>
-                                            <ul class="accordion__list">
-                                                <li>Мастер спорта по спортивной гимнастике, абсолютная чемпионка республики
-                                                    Татарстан, призер и победитель Всероссийских соревнований</li>
-                                                <li>2003-2023гг. преподаватель кафедры сложно координационных и зрелищных
-                                                    видов спорта БашИФК</li>
-                                                <li>Сертифицированный тренер</li>
-                                                <li>Преподавательский стаж - 24 года</li>
-                                            </ul>
-                                            <h3 class="accordion__subtitle">Опыт работы:</h3>
-                                            <ul class="accordion__list">
-                                                <li>1999 - 2003 гг. Фитнес центр „Лидер” г. Набережные Челны</li>
-                                                <li>2004 - 2005 г. Фитнес центр „Аврора” г.Уфа - координатор групповых
-                                                    программ</li>
-                                                <li>2006 - 2018гг. Международная сеть фитнес клубов „ World class“ г.Уфа -
-                                                    инструктор групповых программ, основатель и координатор направления
-                                                    Kinezio</li>
-                                                <li>2022 г. Открытие своей студии Пилатеса</li>
-                                                <li>Опыт работы сфере фитнеса - 24 года</li>
-                                            </ul>
-                                        </div>
-                                        <div
-                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
-                                            <div class="wrapper-img">
-                                                <img data-src="/images/teachers/fathetdinova-gulnaz-prepodavatel-shkoly-fitnesa.webp"
-                                                    src="/images/lazy.png"
-                                                    alt="Фатхетдинова Гульназ - препродаватель школы фитнеса"
-                                                    class="accordion__img teacher__img"
-                                                    style="scale: 1.5; object-position: -43px -19px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div>                  
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -945,170 +410,77 @@
                 <div class="col-12">
                     <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                         <div class="container p-0">
-                            <div class="carousel-inner carousel-inner_multi">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-12 col-md-6"><img
-                                                data-src="/images/graduates/shkola-fitnesa-o-fit-ufa.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Школа фитнеса О ФИТ город Уфа"></div>
-                                        <div class="col-12 col-md-6"><img
-                                                data-src="/images/graduates/na-baze-bashkirskogo-instituta-fizicheskoj-kultury.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="На базе Башкирского Института Физической Культуры"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/povyshenie-kvalifikacii-praktikuyushchego-trenera.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Повышение квалификации практикующего тренера"></div>
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/obuchaem-na-instruktora-detskogo-fitnesa.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Обучаем на инструтора детского фитнеса"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/rasshirenie-trenerskogo-profilya.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Расширение тренерского профиля"></div>
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/dlya-ehffektivnyh-samostoyatelnyh-trenirovok.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Для эффективных самостоятельных тренировок"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/viktoriya-stepan-i-gulnaz.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Препрдаватели школы фитнеса О-ФИТ город Уфа"></div>
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/rukovoditel-shkoly-fitnesa-viktoriya.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Руководитель школы фитнеса Виктория Крутько"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/studenty-shkoly-fitnesa-i-anisimov-stepan.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Студенты школы фитнеса и Анисимов Степан"></div>
-                                        <div class="col-md-6"><img src="/images/graduates/auditoriya-shkoly-fitnesa.webp"
-                                                class="d-block w-100 employment__item" alt="Аудитория школы фитнеса">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/kak-prohodyat-trenirovki-v-shkole-fitnesa.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Как проходят тренировки в школе фитнеса"></div>
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/kak-prohodit-praktika-v-shkole-fitnesa.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Как проходит практика в школе фитнеса"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/zanyatiya-provodyatsya-pod-kontrolem-prepodavatelya.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Занятия проводятся под контролем преподавателя"></div>
-                                        <div class="col-md-6"><img
-                                                data-src="/images/graduates/obuchenie-na-trenera-gruppovyh-programm.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Обучение на тренера групповых программ"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-12"><img
-                                                data-src="/images/graduates/diplom-gosudarstvennogo-obrazca.webp"
-                                                src="/images/lazy.png" class="d-block w-100 employment__item"
-                                                alt="Диплом государственного образца"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-inner carousel-inner_solo">
-                                <div class="carousel-item active">
+                            <div class="carousel-inner">
+                                <div class="carousel-item col-md-4 active">
                                     <img data-src="/images/graduates/shkola-fitnesa-o-fit-ufa.webp" src="/images/lazy.png"
                                         class="d-block w-100 employment__item" alt="Школа фитнеса О ФИТ город Уфа">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/na-baze-bashkirskogo-instituta-fizicheskoj-kultury.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="На базе Башкирского Института Физической Культуры">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/povyshenie-kvalifikacii-praktikuyushchego-trenera.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Повышение квалификации практикующего тренера">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/obuchaem-na-instruktora-detskogo-fitnesa.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Обучаем на инструтора детского фитнеса">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/rasshirenie-trenerskogo-profilya.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Расширение тренерского профиля">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/dlya-ehffektivnyh-samostoyatelnyh-trenirovok.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Для эффективных самостоятельных тренировок">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/viktoriya-stepan-i-gulnaz.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Препрдаватели школы фитнеса О-ФИТ город Уфа">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/rukovoditel-shkoly-fitnesa-viktoriya.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Руководитель школы фитнеса Виктория Крутько">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/studenty-shkoly-fitnesa-i-anisimov-stepan.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Студенты школы фитнеса и Анисимов Степан">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/auditoriya-shkoly-fitnesa.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Аудитория школы фитнеса">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/kak-prohodyat-trenirovki-v-shkole-fitnesa.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Как проходят тренировки в школе фитнеса">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/kak-prohodit-praktika-v-shkole-fitnesa.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Как проходит практика в школе фитнеса">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/zanyatiya-provodyatsya-pod-kontrolem-prepodavatelya.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Занятия проводятся под контролем преподавателя">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/obuchenie-na-trenera-gruppovyh-programm.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Обучение на тренера групповых программ">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item col-md-4">
                                     <img data-src="/images/graduates/diplom-gosudarstvennogo-obrazca.webp"
                                         src="/images/lazy.png" class="d-block w-100 employment__item"
                                         alt="Диплом государственного образца">
