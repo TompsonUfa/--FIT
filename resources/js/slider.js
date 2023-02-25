@@ -1,15 +1,37 @@
-let items = document.querySelectorAll('.carousel .carousel-item')
-
-items.forEach((el) => {
-    const minPerSlide = 4
-    let next = el.nextElementSibling
-    for (var i=1; i<minPerSlide; i++) {
-        if (!next) {
-            // wrap carousel by using first child
-        	next = items[0]
-      	}
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
+document.addEventListener('DOMContentLoaded', function(){
+    const screenWidth = window.screen.width,
+     slider = document.querySelector('.slider'),
+     sliderItems = slider.querySelector('.slider__items'),
+     btnNext = slider.querySelector('.slider__btn_next'),
+     btnPrev = slider.querySelector('.slider__btn_prev');
+    
+    let viewSlide = 0,
+    countSlide = 0;
+    if (screenWidth > 770){
+         countSlide = Math.ceil(sliderItems.children.length / 2) - 1;
+    } else {
+         countSlide = sliderItems.children.length - 1;
     }
+
+    btnNext.addEventListener('click', function(){
+        
+        if (viewSlide < countSlide){
+            viewSlide++;
+        } else {
+            viewSlide = 0;
+        }
+        sliderItems.style.transform = `translate(${-viewSlide * sliderItems.offsetWidth}px)`;
+        sliderItems.style.webkitTransform = `translate(${-viewSlide * sliderItems.offsetWidth}px)`;
+        sliderItems.style.MozTransform = `translate(${-viewSlide * sliderItems.offsetWidth}px)`;
+    })
+    btnPrev.addEventListener('click', function(){
+        if (viewSlide > 0){
+            viewSlide--;
+        } else {
+            viewSlide = countSlide;
+        }
+        sliderItems.style.transform = `translate(${-viewSlide * sliderItems.offsetWidth}px)`;
+        sliderItems.style.webkitTransform = `translate(${-viewSlide * sliderItems.offsetWidth}px)`;
+        sliderItems.style.MozTransform = `translate(${-viewSlide * sliderItems.offsetWidth}px)`;
+    });
 })

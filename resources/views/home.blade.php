@@ -407,105 +407,39 @@
         </div>
         <div class="section__content container-fluid">
             <div class="row">
-                <div class="col-12">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
-                        <div class="container p-0">
-                            <div class="carousel-inner">
-                                <div class="carousel-item col-md-4 active">
-                                    <img data-src="/images/graduates/shkola-fitnesa-o-fit-ufa.webp" src="/images/lazy.png"
-                                        class="d-block w-100 employment__item" alt="Школа фитнеса О ФИТ город Уфа">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/na-baze-bashkirskogo-instituta-fizicheskoj-kultury.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="На базе Башкирского Института Физической Культуры">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/povyshenie-kvalifikacii-praktikuyushchego-trenera.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Повышение квалификации практикующего тренера">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/obuchaem-na-instruktora-detskogo-fitnesa.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Обучаем на инструтора детского фитнеса">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/rasshirenie-trenerskogo-profilya.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Расширение тренерского профиля">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/dlya-ehffektivnyh-samostoyatelnyh-trenirovok.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Для эффективных самостоятельных тренировок">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/viktoriya-stepan-i-gulnaz.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Препрдаватели школы фитнеса О-ФИТ город Уфа">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/rukovoditel-shkoly-fitnesa-viktoriya.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Руководитель школы фитнеса Виктория Крутько">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/studenty-shkoly-fitnesa-i-anisimov-stepan.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Студенты школы фитнеса и Анисимов Степан">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/auditoriya-shkoly-fitnesa.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Аудитория школы фитнеса">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/kak-prohodyat-trenirovki-v-shkole-fitnesa.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Как проходят тренировки в школе фитнеса">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/kak-prohodit-praktika-v-shkole-fitnesa.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Как проходит практика в школе фитнеса">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/zanyatiya-provodyatsya-pod-kontrolem-prepodavatelya.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Занятия проводятся под контролем преподавателя">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/obuchenie-na-trenera-gruppovyh-programm.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Обучение на тренера групповых программ">
-                                </div>
-                                <div class="carousel-item col-md-4">
-                                    <img data-src="/images/graduates/diplom-gosudarstvennogo-obrazca.webp"
-                                        src="/images/lazy.png" class="d-block w-100 employment__item"
-                                        alt="Диплом государственного образца">
-                                </div>
+                    <div class="slider">
+                        <div class="slider__wrapper container p-0">
+                            <div class="slider__items">             
+                                @foreach ($employment as $slide)
+                                    <div class="slider__item">
+                                        @if ($slide['video'] == null)
+                                            <img data-src="/images/graduates/{{$slide['img']}}" src="/images/lazy.png"
+                                            class="slider__img" alt="{{$slide['name']}}">
+                                        @else
+                                            <video width="100%" height="100%" controls>
+                                                <source src="/images/graduates/{{$slide['video']}}" type="video/mp4">
+                                                Ваш браузер, не поддерживает видео.
+                                            </video>
+                                        @endif
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
-                        <button class="carousel-control-prev carousel-control" type="button"
-                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <button class="slider__btn slider__btn_prev">
                             <svg class="carousel-control-prev-icon" xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
                             </svg>
-                            <span class="visually-hidden">Предыдущий</span>
                         </button>
-                        <button class="carousel-control-next carousel-control" type="button"
-                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <button class="slider__btn slider__btn_next">
                             <svg class="carousel-control-next-icon" xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
                             </svg>
-                            <span class="visually-hidden">Следующий</span>
                         </button>
                     </div>
                 </div>
