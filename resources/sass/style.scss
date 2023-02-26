@@ -41,6 +41,8 @@ p {
         justify-content: center;
     }
     .header__contact {
+        padding: 0;
+        margin: 0;
         display: none;
         list-style: none;
         gap: 50px;
@@ -80,6 +82,8 @@ p {
         }
     }
     .social {
+        padding: 0;
+        margin: 0;
         list-style: none;
         display: none;
         gap: 15px;
@@ -291,13 +295,13 @@ p {
     &__content {
         padding: 0px 10px 27px 10px;
     }
-    &__desc,
-    &__list {
+    p,
+    ul {
         font-size: 18px;
         line-height: 1.55;
         font-weight: 300;
     }
-    &__list {
+    ul {
         padding-left: 20px !important;
     }
     &__img {
@@ -662,32 +666,32 @@ p {
     }
 }
 // слайдер
-.slider{
+.slider {
     position: relative;
-    &__wrapper{
+    &__wrapper {
         overflow: hidden;
     }
-    &__items{
+    &__items {
         position: relative;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         width: 100%;
         display: flex;
     }
-    &__item{
+    &__item {
         padding: 0px 10px;
         flex: 0 0 50%;
         max-width: 50%;
         height: 500px;
-        video{
+        video {
             object-fit: cover;
         }
     }
-    &__img{
+    &__img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
-    &__btn{
+    &__btn {
         position: absolute;
         border: none;
         background-color: transparent;
@@ -695,53 +699,149 @@ p {
         transform: translate(0%, -50%);
         transition: opacity 0.2s ease;
         opacity: 0.7;
-        &:hover{
+        &:hover {
             opacity: 1;
         }
-        &_prev{
+        &_prev {
             left: 50px;
         }
-        &_next{
+        &_next {
             right: 50px;
         }
     }
 }
 // панель администратора
-.sidebar{
+.sidebar {
     background-color: #212529;
     height: 100vh;
-    &__logo{
+    &__logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+        img {
             width: 150px;
             height: 150px;
-        } 
+        }
     }
-    &__nav{ 
+    &__nav {
         border-top: 1px solid var(--white-color);
         padding: 35px !important;
         flex-direction: column;
     }
     .nav {
-        &__item{
+        &__item {
             transition: all 0.2s linear;
-            &:hover{
+            &:hover {
                 background-color: var(--second-color);
             }
-            &_active{
+            &_active {
                 background-color: var(--second-color);
             }
         }
-        &__link{
+        &__link {
             text-transform: uppercase;
             padding: 10px 15px !important;
             display: block;
-            color: var(--white-color);    
+            color: var(--white-color);
         }
     }
 }
+.panel {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    &__title,
+    &__desc {
+        color: var(--gray-color);
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
+    &__desc {
+        font-size: 18px;
+        letter-spacing: 0.6px;
+    }
+    &__btn {
+        background-color: var(--green-color);
+        border-color: var(--green-color);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+}
+.form-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    &__btn {
+        background-color: var(--green-color);
+        border-color: var(--green-color);
+    }
+}
+.table {
+    &__img {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+    }
+    &__btn {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        &_edit {
+            svg {
+                fill: var(--green-color);
+            }
+        }
+        &_remove {
+            svg {
+                fill: var(--red-color);
+            }
+        }
+    }
+}
+.prev-img {
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    background-color: #f8f8f8;
+    border: 1px solid #dee2e6;
+}
+.file-input {
+    input {
+        opacity: 0;
+        width: 0.1px;
+        height: 0.1px;
+        position: absolute;
+    }
+    label {
+        display: inline-block;
+        position: relative;
+        background-color: var(--green-color);
+        border-color: var(--green-color);
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+}
+.ck.ck-content:not(.ck-comment__input *) {
+    height: 300px;
+    overflow-y: auto;
+}
+.ck-file-dialog-button {
+    display: none;
+}
+//анимации
 @keyframes showMenu {
     0% {
         display: none;
@@ -783,6 +883,7 @@ p {
         box-shadow: 0 0 0 0 rgba(#fe5001, 0);
     }
 }
+// медиа
 @media screen and (max-width: 1200px) {
     .title {
         font-size: 30px;
@@ -974,20 +1075,20 @@ p {
             padding-bottom: 30px;
         }
     }
-    .slider{
-        &__item{
+    .slider {
+        &__item {
             flex: 0 0 100%;
             max-width: 100%;
             height: 450px;
         }
-        &__img{
+        &__img {
             object-fit: cover;
         }
-        &__btn{
-            &_prev{
+        &__btn {
+            &_prev {
                 left: 30px;
             }
-            &_next{
+            &_next {
                 right: 30px;
             }
         }

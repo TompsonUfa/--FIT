@@ -236,30 +236,31 @@
                 <div class="col-12">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         @foreach ($courses as $course)
-                        <div class="accordion-item course">
-                            <h2 class="accordion-header" id="flush-heading-{{$loop->iteration}}">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{$loop->iteration}}" aria-expanded="false"
-                                    aria-controls="flush-collapse-{{$loop->iteration}}">
-                                    {{$course['title']}}
-                                </button>
-                            </h2>
-                            <div id="flush-collapse-{{$loop->iteration}}" class="accordion-collapse collapse "
-                                aria-labelledby="flush-heading-{{$loop->iteration}}" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            {!!$course['text']!!}
-                                        </div>
-                                        <div class="col-12 col-lg-6">
-                                            <img data-src="/images/posters/{{$course['img']}}"
-                                                src="/images/lazy.png" alt="{{$course['title']}}"
-                                                class="accordion__img">
+                            <div class="accordion-item course">
+                                <h2 class="accordion-header" id="flush-heading-{{ $loop->iteration }}">
+                                    <button class="accordion-button collapsed accordion__title" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{ $loop->iteration }}"
+                                        aria-expanded="false" aria-controls="flush-collapse-{{ $loop->iteration }}">
+                                        {{ $course['title'] }}
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse-{{ $loop->iteration }}" class="accordion-collapse collapse "
+                                    aria-labelledby="flush-heading-{{ $loop->iteration }}"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body accordion__content">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                {!! $course['text'] !!}
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <img data-src="/storage/images/courses/{{ $course['id'] . '/' . $course['img'] }}.webp"
+                                                    src="/images/lazy.png" alt="{{ $course['title'] }}"
+                                                    class="accordion__img">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                     <div class="courses__block">
@@ -298,8 +299,8 @@
             <div class="row">
                 @foreach ($posters as $poster)
                     <div class="col-12 col-lg-6">
-                        <img class="posters__img mb-4" data-src="/images/posters/{{$poster['img']}}"
-                            src="/images/lazy.png" alt="{{$poster['name']}}">
+                        <img class="posters__img mb-4" data-src="/images/posters/{{ $poster['img'] }}"
+                            src="/images/lazy.png" alt="{{ $poster['name'] }}">
                     </div>
                 @endforeach
                 <div class="col-12 banner posters__banner">
@@ -353,33 +354,35 @@
                 <div class="col-12">
                     <div class="accordion accordion-flush" id="accordionExample">
                         @foreach ($teachers as $teacher)
-                        <div class="accordion-item teacher">
-                            <h2 class="accordion-header" id="teacher-heading-{{$loop->iteration}}">
-                                <button class="accordion-button collapsed accordion__title" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#teacher-collapse-{{$loop->iteration}}" aria-expanded="false"
-                                    aria-controls="teacher-collapse-{{$loop->iteration}}">
-                                    {{$teacher['fullName']}}
-                                </button>
-                            </h2>
-                            <div id="teacher-collapse-{{$loop->iteration}}" class="accordion-collapse collapse"
-                                aria-labelledby="teacher-heading-{{$loop->iteration}}" data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion__content">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            {!!$teacher['text']!!}
-                                        </div>
-                                        <div
-                                            class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
-                                            <div class="wrapper-img">
-                                                <img data-src="/images/teachers/{{$teacher['img']}}"
-                                                    src="/images/lazy.png" alt="{{$teacher['fullName']}}"
-                                                    class="accordion__img teacher__img">
+                            <div class="accordion-item teacher">
+                                <h2 class="accordion-header" id="teacher-heading-{{ $loop->iteration }}">
+                                    <button class="accordion-button collapsed accordion__title" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#teacher-collapse-{{ $loop->iteration }}" aria-expanded="false"
+                                        aria-controls="teacher-collapse-{{ $loop->iteration }}">
+                                        {{ $teacher['fullName'] }}
+                                    </button>
+                                </h2>
+                                <div id="teacher-collapse-{{ $loop->iteration }}" class="accordion-collapse collapse"
+                                    aria-labelledby="teacher-heading-{{ $loop->iteration }}"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body accordion__content">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                {!! $teacher['text'] !!}
+                                            </div>
+                                            <div
+                                                class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
+                                                <div class="wrapper-img">
+                                                    <img data-src="/images/teachers/{{ $teacher['img'] }}"
+                                                        src="/images/lazy.png" alt="{{ $teacher['fullName'] }}"
+                                                        class="accordion__img teacher__img">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>                  
                         @endforeach
                     </div>
                 </div>
@@ -407,43 +410,41 @@
         </div>
         <div class="section__content container-fluid">
             <div class="row">
-                    <div class="slider">
-                        <div class="slider__wrapper container p-0">
-                            <div class="slider__items">             
-                                @foreach ($employment as $slide)
-                                    <div class="slider__item">
-                                        @if ($slide['video'] == null)
-                                            <img data-src="/images/graduates/{{$slide['img']}}" src="/images/lazy.png"
-                                            class="slider__img" alt="{{$slide['name']}}">
-                                        @else
-                                            <video width="100%" height="100%" controls>
-                                                <source src="/images/graduates/{{$slide['video']}}" type="video/mp4">
-                                                Ваш браузер, не поддерживает видео.
-                                            </video>
-                                        @endif
-                                    </div>
-                                @endforeach
-                            </div>
+                <div class="slider">
+                    <div class="slider__wrapper container p-0">
+                        <div class="slider__items">
+                            @foreach ($employment as $slide)
+                                <div class="slider__item">
+                                    @if ($slide['video'] == null)
+                                        <img data-src="/images/graduates/{{ $slide['img'] }}" src="/images/lazy.png"
+                                            class="slider__img" alt="{{ $slide['name'] }}">
+                                    @else
+                                        <video width="100%" height="100%" controls>
+                                            <source src="/images/graduates/{{ $slide['video'] }}" type="video/mp4">
+                                            Ваш браузер, не поддерживает видео.
+                                        </video>
+                                    @endif
+                                </div>
+                            @endforeach
                         </div>
-                        <button class="slider__btn slider__btn_prev">
-                            <svg class="carousel-control-prev-icon" xmlns="http://www.w3.org/2000/svg" width="16"
-                                height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                            </svg>
-                        </button>
-                        <button class="slider__btn slider__btn_next">
-                            <svg class="carousel-control-next-icon" xmlns="http://www.w3.org/2000/svg" width="16"
-                                height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                            </svg>
-                        </button>
                     </div>
+                    <button class="slider__btn slider__btn_prev">
+                        <svg class="carousel-control-prev-icon" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                        </svg>
+                    </button>
+                    <button class="slider__btn slider__btn_next">
+                        <svg class="carousel-control-next-icon" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <section class="section section__reasons reasons" id="reasons">

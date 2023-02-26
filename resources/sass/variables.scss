@@ -2,8 +2,11 @@
     --first-color: #157fc4;
     --second-color: #fe5001;
     --third-color: #f5f0e9;
+    --gray-color: #575a65;
     --dark-color: #000;
     --white-color: #fff;
+    --green-color: #4bd396;
+    --red-color: #f5707a;
     --title-font: "Montserrat", sans-serif;
     --title-font-weight: 800;
     --text-font: "Exo 2", sans-serif;
@@ -54,20 +57,20 @@ h6 {
     font-family: var(--title-font) !important;
     font-weight: var(--title-font-weight) !important;
 }
-
+label {
+    font-family: var(--text-font) !important;
+}
 p,
 a,
 span,
+td,
+th,
 address {
     font-family: var(--text-font) !important;
     margin-bottom: 0 !important;
 }
 a {
     text-decoration: none !important;
-}
-ul {
-    padding: 0 !important;
-    margin: 0 !important;
 }
 strong {
     font-weight: 700 !important;
