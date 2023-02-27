@@ -12,15 +12,7 @@
                     </h2>
                 </div>
             </div>
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            
             <form action="" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row justify-content-center mb-3">
@@ -38,11 +30,11 @@
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="exampleInputTitle" class="form-label">Заголовок курса</label>
-                            <input type="text" name="title" class="form-control" id="exampleInputTitle">
+                            <input type="text" name="title" value="{{old('title')}}" class="form-control" id="exampleInputTitle">
                         </div>
                     </div>
                     <div class="col-12">
-                        <textarea class="wysiwyg" name="text"></textarea>
+                        <textarea class="wysiwyg" name="text">{{old('text')}}</textarea>
                     </div>
                 </div>
                 <button class="btn btn-success panel__btn" type="submit">Сохранить</button>
@@ -52,5 +44,5 @@
     </div>
 @endsection
 @push('scripts')
-    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/change-img.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
 @endpush

@@ -35,7 +35,7 @@ class CoursesController extends Controller
     }
     public function addCourse(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'title' => 'required|min:5|max:100',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048|',
             'text' => 'required|min:15'
@@ -50,7 +50,9 @@ class CoursesController extends Controller
         ]);
         $image->store('images/courses/' . $course . "/", 'public');
         $classifiedImg = $request->file('image');
-        Image::make($classifiedImg)->encode('webp', 75)->save('storage/images/courses/' . $course . "/" .  Str::slug($title) . '.webp');
-        return redirect()->route('courses');
+        $loadImg = Image::make($classifiedImg)->encode('webp', 75)->save(storage_path() . '/app/public/images/courses/' . $course . "/" .  Str::slug($title) . '.webp');
+        if ($course && $loadImg) {
+            return response()->json(['url' => route('courses')]);
+        }
     }
 }

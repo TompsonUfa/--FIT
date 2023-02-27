@@ -11,7 +11,7 @@
                 Курсы
             </h2>
             <p class="panel__desc mb-3">
-                Количество курсов на сайте: {{ $total }}
+                Количество курсов на сайте: <span class="panel__counter">{{ $total }}</span>
             </p>
             <a href="courses/add" class="btn btn-success panel__btn mb-3">Добавить курс
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -62,7 +62,7 @@
                                                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                                                 </svg>
                                             </a>
-                                            <a href="#" class="table__btn table__btn_remove mx-2">
+                                            <div class="table__btn table__btn_remove mx-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                                     class="bi bi-x-square" viewBox="0 0 16 16">
                                                     <path
@@ -70,7 +70,7 @@
                                                     <path
                                                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                                 </svg>
-                                            </a>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

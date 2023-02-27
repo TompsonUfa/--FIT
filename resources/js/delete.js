@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             success: function (response) {
                 const tr = document.querySelector(`tr[data-course-id='${id}']`);
+                let counter = document.querySelector('.panel__counter');
+                counter.innerHTML = Number(counter.textContent) - 1 ;
                 tr.remove();
                 modal.hide();
             },

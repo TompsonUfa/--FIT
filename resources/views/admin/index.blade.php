@@ -15,31 +15,33 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2 col-xl-3 sidebar p-0">
-                <div class="sidebar__logo">
-                    <img src="/logo.png" alt="ШКОЛА ФИТНЕСА «Ө-FIT»">
+                <div class="sidebar__content">
+                    <div class="sidebar__logo">
+                        <img src="/logo.png" alt="ШКОЛА ФИТНЕСА «Ө-FIT»">
+                    </div>
+                    <ul class="sidebar__nav nav">
+                        <li class="nav__item {{ request()->is('admin/courses*') ? 'nav__item_active' : null }}">
+                            <a href="{{ url('admin/courses') }}" class="nav__link">
+                                Курсы
+                            </a>
+                        </li>
+                        <li class="nav__item {{ request()->is('admin/posters*') ? 'nav__item_active' : null }}">
+                            <a href="{{ url('admin/posters') }}" class="nav__link">
+                                Афиши
+                            </a>
+                        </li>
+                        <li class="nav__item {{ request()->is('admin/teachers*') ? 'nav__item_active' : null }}">
+                            <a href="{{ url('admin/teachers') }}" class="nav__link">
+                                ПРЕПОДАВАТЕЛИ
+                            </a>
+                        </li>
+                        <li class="nav__item {{ request()->is('admin/employment*') ? 'nav__item_active' : null }}">
+                            <a href="{{ url('admin/employment') }}" class="nav__link">
+                                ТРУДОУСТРОЙСТВО
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="sidebar__nav nav">
-                    <li class="nav__item {{ request()->is('admin/courses*') ? 'nav__item_active' : null }}">
-                        <a href="{{ url('admin/courses') }}" class="nav__link">
-                            Курсы
-                        </a>
-                    </li>
-                    <li class="nav__item {{ request()->is('admin/posters*') ? 'nav__item_active' : null }}">
-                        <a href="{{ url('admin/posters') }}" class="nav__link">
-                            Афиши
-                        </a>
-                    </li>
-                    <li class="nav__item {{ request()->is('admin/teachers*') ? 'nav__item_active' : null }}">
-                        <a href="{{ url('admin/teachers') }}" class="nav__link">
-                            ПРЕПОДАВАТЕЛИ
-                        </a>
-                    </li>
-                    <li class="nav__item {{ request()->is('admin/employment*') ? 'nav__item_active' : null }}">
-                        <a href="{{ url('admin/employment') }}" class="nav__link">
-                            ТРУДОУСТРОЙСТВО
-                        </a>
-                    </li>
-                </ul>
             </div>
             <div class="col">
                 @yield('content')
