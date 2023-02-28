@@ -713,7 +713,7 @@ p {
 // панель администратора
 .sidebar {
     background-color: #212529;
-    &__content{
+    &__content {
         height: 100vh;
         position: -webkit-sticky;
         position: sticky;
@@ -809,6 +809,7 @@ p {
             }
         }
         &_remove {
+            cursor: pointer;
             svg {
                 fill: var(--red-color);
             }

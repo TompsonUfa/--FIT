@@ -32,6 +32,9 @@ Route::post('/admin/courses', [CoursesController::class, 'delete']);
 Route::get('/admin/courses/add', [CoursesController::class, 'showAddCourse']);
 Route::post('/admin/courses/add', [CoursesController::class, 'addCourse']);
 
+Route::get('/admin/courses/edit/{id}', [CoursesController::class, 'showEditCourse']);
+Route::post('/admin/courses/edit/{id}', [CoursesController::class, 'editCourse']);
+
 Route::get('/admin/posters', [AdminController::class, 'showPosters']);
 Route::get('/admin/teachers', [AdminController::class, 'showTeachers']);
 Route::get('/admin/employment', [AdminController::class, 'showEmployment']);

@@ -27,6 +27,13 @@ class CoursesController extends Controller
     {
         return view('admin.courses.add.index');
     }
+    public function showEditCourse(Request $request, $id)
+    {
+        $course = Course::find($id);
+
+        return view('admin.courses.edit.index', ['course' => $course]);
+    }
+
     public function delete(Request $request)
     {
         $courseId = $request->get('id');
@@ -54,5 +61,33 @@ class CoursesController extends Controller
         if ($course && $loadImg) {
             return response()->json(['url' => route('courses')]);
         }
+    }
+    public function editCourse(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required|min:5|max:100',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048|',
+            'text' => 'required|min:15'
+        ]);
+        // $title = $request->get('title');
+        // $image = $request->file('image');
+        // $text = $request->get('text');
+        // $course = Course::find($id);
+        // if ($image != null) { //можно дописать, чтоб старую картинку переменновывал в новую
+        //     $image->store('images/courses/' . $course->id . "/", 'public');
+        //     $classifiedImg = $request->file('image');
+        //     Image::make($classifiedImg)->encode('webp', 75)->save(storage_path() . '/app/public/images/courses/' . $course->id . "/" .  Str::slug($title) . '.webp');
+        // } else {
+        //     if ($title != $course->title) {
+        //         Storage::move('public/images/courses/' . $course->id . '/' . $course->img . '.webp', 'public/images/courses/' . $course->id . '/' . str_slug($title) . '.webp');
+        //     }
+        // }
+        // if ($course) {
+        //     $course->title = $title;
+        //     $course->img = Str::slug($title);
+        //     $course->text = $text;
+        //     $course->save();
+        //     return response()->json(['url' => route('courses')]);
+        // }
     }
 }
