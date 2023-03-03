@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector('form');
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+        const loader = document.querySelector('.loader');
+        loader.classList.add('loader_visible')
+        document.querySelector('body').classList.add('overflow-hidden');
         $.ajax({
             url: '',
             method: 'post',
@@ -16,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             },
             error: function (response) {
+                loader.classList.remove('loader_visible')
+                document.querySelector('body').classList.remove('overflow-hidden');
                 let modal = document.querySelector('.modal'),
                     modalText = modal.querySelector('.modal-body');
                 const errors = response.responseJSON.errors,

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class poster extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $fillable = [
         'img',
         'name',

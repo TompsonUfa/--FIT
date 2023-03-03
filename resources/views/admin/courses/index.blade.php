@@ -105,6 +105,11 @@
             </div>
         </div>
     </div>
+    <div class="position-fixed top-0 start-0 loader">
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
     @push('scripts')
         @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js', 'resources/js/delete.js'])
     @endpush

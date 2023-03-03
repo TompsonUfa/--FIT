@@ -1,6 +1,6 @@
 @extends('admin.index')
 
-@section('title', 'Панель администратора | Редактировать курс')
+@section('title', 'Панель администратора | Редактировать афишу')
 
 @section('content')
     <div class="row-12">
@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="panel__title mb-3">
-                        Редактировать Курс «{{ $course->title }}»
+                        Редактировать афишу «{{ $poster->name }}»
                     </h2>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                         <div class="col-12">
                             <div class="file-input">
                                 <img class="prev-img mb-3"
-                                    src="/storage/images/courses/{{ $course->id }}/{{ Str::slug($course->title) }}.webp">
+                                    src="/storage/images/posters/{{ $poster->id }}/{{ Str::slug($poster->name) }}.webp">
                                 <input type="file" id="image" name="image" class="image"
                                     accept=".jpg,.png,.jpeg,.gif,.webp,.svg">
                                 <label for="image" class="btn btn-success">
@@ -31,13 +31,10 @@
                     </div>
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="exampleInputTitle" class="form-label">Заголовок курса</label>
+                            <label for="exampleInputTitle" class="form-label">Название афиши</label>
                             <input type="text" name="title" class="form-control" id="exampleInputTitle"
-                                value="{{ $course->title }}">
+                                value="{{ $poster->name }}">
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <textarea class="wysiwyg" name="text">{{ $course->text }}</textarea>
                     </div>
                 </div>
                 <button class="btn btn-success panel__btn" type="submit">Сохранить</button>
@@ -68,5 +65,5 @@
     </div>
 @endsection
 @push('scripts')
-    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
 @endpush

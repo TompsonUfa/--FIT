@@ -1,6 +1,6 @@
 @extends('admin.index')
 
-@section('title', 'Панель администратора | Редактировать курс')
+@section('title', 'Панель администратора | Редактировать Преподаватель')
 
 @section('content')
     <div class="row-12">
@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="panel__title mb-3">
-                        Редактировать Курс «{{ $course->title }}»
+                        Преподаватель «{{ $teacher->fullName }}»
                     </h2>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                         <div class="col-12">
                             <div class="file-input">
                                 <img class="prev-img mb-3"
-                                    src="/storage/images/courses/{{ $course->id }}/{{ Str::slug($course->title) }}.webp">
+                                    src="/storage/images/teachers/{{ $teacher->id }}/{{ Str::slug($teacher->fullName) }}.webp">
                                 <input type="file" id="image" name="image" class="image"
                                     accept=".jpg,.png,.jpeg,.gif,.webp,.svg">
                                 <label for="image" class="btn btn-success">
@@ -31,13 +31,13 @@
                     </div>
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="exampleInputTitle" class="form-label">Заголовок курса</label>
+                            <label for="exampleInputTitle" class="form-label">Полное ФИО</label>
                             <input type="text" name="title" class="form-control" id="exampleInputTitle"
-                                value="{{ $course->title }}">
+                                value="{{ $teacher->fullName }}">
                         </div>
                     </div>
                     <div class="col-12">
-                        <textarea class="wysiwyg" name="text">{{ $course->text }}</textarea>
+                        <textarea class="wysiwyg" name="text">{{ $teacher->text }}</textarea>
                     </div>
                 </div>
                 <button class="btn btn-success panel__btn" type="submit">Сохранить</button>

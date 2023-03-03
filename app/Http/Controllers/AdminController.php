@@ -10,10 +10,6 @@ class AdminController extends Controller
     {
         return view('admin.courses.index');
     }
-    public function showPosters()
-    {
-        return view('admin.posters.index');
-    }
     public function showTeachers()
     {
         return view('admin.teachers.index');

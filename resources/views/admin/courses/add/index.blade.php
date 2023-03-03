@@ -12,7 +12,6 @@
                     </h2>
                 </div>
             </div>
-
             <form action="" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row justify-content-center mb-3">
@@ -58,6 +57,11 @@
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="position-fixed top-0 start-0 loader">
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 @endsection

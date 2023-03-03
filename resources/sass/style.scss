@@ -848,6 +848,21 @@ p {
 .ck-file-dialog-button {
     display: none;
 }
+.loader{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000082;
+    &_visible{
+        display: flex;
+    }
+    .spinner-grow{
+        color: var(--second-color);
+    }
+}
+
 //анимации
 @keyframes showMenu {
     0% {

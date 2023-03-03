@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.querySelector('#exampleModal');
-    if (modal) {
-        var modalText = modal.querySelector('.modal-desc'),
-            btnRemove = modal.querySelector('.btn_remove');
+    
+    var modalText = modal.querySelector('.modal-desc'),
+        btnRemove = modal.querySelector('.btn_remove');
         modal = bootstrap.Modal.getOrCreateInstance(modal);
 
-    }
-
     function deleteItem(id) {
+        modal.hide();
+        const loader = document.querySelector('.loader');
+        loader.classList.add('loader_visible')
+        document.querySelector('body').classList.add('overflow-hidden');
         $.ajax({
             url: "",
             headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') },
@@ -16,11 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 id: id,
             },
             success: function (response) {
-                const tr = document.querySelector(`tr[data-course-id='${id}']`);
-                let counter = document.querySelector('.panel__counter');
-                counter.innerHTML = Number(counter.textContent) - 1 ;
-                tr.remove();
-                modal.hide();
+                location.reload();
             },
         });
     }

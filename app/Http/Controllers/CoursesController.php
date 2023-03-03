@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\File;
 use App\Models\course;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -33,7 +34,6 @@ class CoursesController extends Controller
 
         return view('admin.courses.edit.index', ['course' => $course]);
     }
-
     public function delete(Request $request)
     {
         $courseId = $request->get('id');
@@ -55,9 +55,9 @@ class CoursesController extends Controller
             'text' => $text,
             'img' =>  Str::slug($title),
         ]);
-        $image->store('images/courses/' . $course . "/", 'public');
-        $classifiedImg = $request->file('image');
-        $loadImg = Image::make($classifiedImg)->encode('webp', 75)->save(storage_path() . '/app/public/images/courses/' . $course . "/" .  Str::slug($title) . '.webp');
+        Storage::makeDirectory('/public/images/courses/' . $course);
+        $loadImg = Image::make($image)->encode('webp', 75);
+        $loadImg->save(Storage::path('/public/images/courses/' . $course . "/" .  Str::slug($title) . '.webp'));
         if ($course && $loadImg) {
             return response()->json(['url' => route('courses')]);
         }
@@ -69,25 +69,32 @@ class CoursesController extends Controller
             'image' => 'image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048|',
             'text' => 'required|min:15'
         ]);
-        // $title = $request->get('title');
-        // $image = $request->file('image');
-        // $text = $request->get('text');
-        // $course = Course::find($id);
-        // if ($image != null) { //можно дописать, чтоб старую картинку переменновывал в новую
-        //     $image->store('images/courses/' . $course->id . "/", 'public');
-        //     $classifiedImg = $request->file('image');
-        //     Image::make($classifiedImg)->encode('webp', 75)->save(storage_path() . '/app/public/images/courses/' . $course->id . "/" .  Str::slug($title) . '.webp');
-        // } else {
-        //     if ($title != $course->title) {
-        //         Storage::move('public/images/courses/' . $course->id . '/' . $course->img . '.webp', 'public/images/courses/' . $course->id . '/' . str_slug($title) . '.webp');
-        //     }
-        // }
-        // if ($course) {
-        //     $course->title = $title;
-        //     $course->img = Str::slug($title);
-        //     $course->text = $text;
-        //     $course->save();
-        //     return response()->json(['url' => route('courses')]);
-        // }
+        $title = $request->get('title');
+        $image = $request->file('image');
+        $text = $request->get('text');
+        $course = Course::find($id);
+        if ($title != $course->title) {
+            $course->title = $title;
+            $nameImg = Str::slug($title);
+        } else {
+            $nameImg = Str::slug($course->title);
+        }
+        if ($text != $course->text) {
+            $course->text = $text;
+        }
+        if (empty($image)) {
+            if ($nameImg != $course->img) {
+                Storage::move('public/images/courses/' . $course->id . '/' . $course->img . '.webp', 'public/images/courses/' . $course->id . '/' . str_slug($title) . '.webp');
+                $course->img = $nameImg;
+            }
+        } else {
+            if ($nameImg != $course->img) {
+                Storage::delete('public/images/courses/' . $course->id . '/' . $course->img . '.webp');
+            }
+            Image::make($image)->encode('webp', 75)->save(storage_path() . '/app/public/images/courses/' . $course->id . "/" .  $nameImg . '.webp');
+            $course->img = $nameImg;
+        }
+        $course->save();
+        return response()->json(['url' => route('courses')]);
     }
 }
