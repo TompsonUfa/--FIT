@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.querySelector('#exampleModal');
-    
+
     var modalText = modal.querySelector('.modal-desc'),
         btnRemove = modal.querySelector('.btn_remove');
-        modal = bootstrap.Modal.getOrCreateInstance(modal);
+    modal = bootstrap.Modal.getOrCreateInstance(modal);
 
     function deleteItem(id) {
         modal.hide();
@@ -23,22 +23,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     function openDeleteWindow(event) {
-        const courseId = this.course.id,
-            courseTitle = this.course.title;
-        modalText.innerHTML = `Вы точно хотите удалить курс  <br> «${courseTitle}» ?`;
-        btnRemove.onclick = function () { deleteItem(courseId); }
+        const itemId = this.item.id,
+            itemTitle = this.item.title;
+        modalText.innerHTML = `Вы точно хотите удалить запись  <br> «${itemTitle}» ?`;
+        btnRemove.onclick = function () { deleteItem(itemId); }
         modal.show();
     }
     const btnsRemove = document.querySelectorAll('.table__btn_remove');
     for (let i = 0; i < btnsRemove.length; i++) {
         const btn = btnsRemove[i],
-            courseId = btn.closest('[data-course-id]'),
-            courseTitle = courseId.querySelector('.table__title').textContent;
-        const course = {
-            id: courseId.dataset.courseId,
-            title: courseTitle,
+            itemId = btn.closest('[data-item-id]'),
+            itemTitle = itemId.querySelector('.table__title').textContent;
+        const item = {
+            id: itemId.dataset.itemId,
+            title: itemTitle,
         }
-        btn.addEventListener('click', { handleEvent: openDeleteWindow, course });
+        btn.addEventListener('click', { handleEvent: openDeleteWindow, item });
     }
 })
 

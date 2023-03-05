@@ -21,10 +21,11 @@
                             <div class="file-input">
                                 <img class="prev-img mb-3"
                                     src="/storage/images/courses/{{ $course->id }}/{{ Str::slug($course->title) }}.webp">
+                                <p class="prev-name mb-3"></p>
                                 <input type="file" id="image" name="image" class="image"
                                     accept=".jpg,.png,.jpeg,.gif,.webp,.svg">
                                 <label for="image" class="btn btn-success">
-                                    Добавить фотографию
+                                    Изменить фотографию
                                 </label>
                             </div>
                         </div>
@@ -62,11 +63,11 @@
         </div>
     </div>
     <div class="position-fixed top-0 start-0 loader">
+        <p class="loader__bar"></p>
         <div class="spinner-grow" role="status">
-            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 @endsection
 @push('scripts')
-    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/jquery.form.min.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
 @endpush

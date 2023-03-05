@@ -18,8 +18,9 @@
                     <div class="col-12 text-center">
                         <div class="col-12">
                             <div class="file-input">
-                                <img class="prev-img mb-3" src="/images/no-image.webp">
-                                <input type="file" id="image" name="image" class="image"
+                                <img class="prev-img mb-3 d-block" src="/images/no-image.webp">
+                                <p class="prev-name mb-3"></p>
+                                <input type="file" id="image" name="image" class="file"
                                     accept=".jpg,.png,.jpeg,.gif,.webp,.svg">
                                 <label for="image" class="btn btn-success">
                                     Добавить фотографию
@@ -60,11 +61,11 @@
         </div>
     </div>
     <div class="position-fixed top-0 start-0 loader">
+        <p class="loader__bar"></p>
         <div class="spinner-grow" role="status">
-            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 @endsection
 @push('scripts')
-    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/jquery.form.min.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
 @endpush

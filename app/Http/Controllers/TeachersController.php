@@ -65,7 +65,7 @@ class TeachersController extends Controller
     {
         $request->validate([
             'title' => 'required|min:5|max:100',
-            'image' => 'image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048|',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048|',
             'text' => 'required|min:15'
         ]);
         $title = $request->get('title');

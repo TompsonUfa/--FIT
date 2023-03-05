@@ -38,18 +38,22 @@
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="text-center">Фото</th>
+                                    <th scope="col" class="text-center">Файл</th>
                                     <th scope="col">Заголовок записи</th>
                                     <th scope="col" class="text-center">Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($employment as $item)
-                                    <tr data-course-id={{ $item['id'] }}>
+                                    <tr data-item-id={{ $item['id'] }}>
                                         <td class="align-middle text-center">
-                                            <img class="table__img"
-                                                src="/storage/images/employment/{{ $item['id'] . '/' . $item['img'] . '.webp' }}"
-                                                alt="{{ $item['title'] }}">
+                                            @if (empty($item['img']))
+                                                <p>Видео</p>
+                                            @else
+                                                <img class="table__img"
+                                                    src="/storage/media/employment/{{ $item['id'] . '/' . $item['img'] . '.webp' }}"
+                                                    alt="{{ $item['title'] }}">
+                                            @endif
                                         </td>
                                         <td class="align-middle table__title">{{ $item['name'] }}</td>
                                         <td class="align-middle text-center">
@@ -87,7 +91,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

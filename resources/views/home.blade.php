@@ -299,7 +299,8 @@
             <div class="row">
                 @foreach ($posters as $poster)
                     <div class="col-12 col-lg-6">
-                        <img class="posters__img mb-4" data-src="/images/posters/{{ $poster['img'] }}"
+                        <img class="posters__img mb-4"
+                            data-src="/storage/images/posters/{{ $poster['id'] }}/{{ $poster['img'] }}.webp"
                             src="/images/lazy.png" alt="{{ $poster['name'] }}">
                     </div>
                 @endforeach
@@ -374,7 +375,7 @@
                                             <div
                                                 class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                                 <div class="wrapper-img">
-                                                    <img data-src="/images/teachers/{{ $teacher['img'] }}"
+                                                    <img data-src="/storage/images/teachers/{{ $teacher['id'] }}/{{ $teacher['img'] }}.webp"
                                                         src="/images/lazy.png" alt="{{ $teacher['fullName'] }}"
                                                         class="accordion__img teacher__img">
                                                 </div>
@@ -415,12 +416,14 @@
                         <div class="slider__items">
                             @foreach ($employment as $slide)
                                 <div class="slider__item">
-                                    @if ($slide['video'] == null)
-                                        <img data-src="/images/graduates/{{ $slide['img'] }}" src="/images/lazy.png"
-                                            class="slider__img" alt="{{ $slide['name'] }}">
+                                    @if (empty($slide['video']))
+                                        <img data-src="/storage/media/employment/{{ $slide['id'] }}/{{ $slide['img'] }}.webp"
+                                            src="/images/lazy.png" class="slider__img" alt="{{ $slide['name'] }}">
                                     @else
                                         <video width="100%" height="100%" controls>
-                                            <source src="/images/graduates/{{ $slide['video'] }}" type="video/mp4">
+                                            <source
+                                                src="/storage/media/employment/{{ $slide['id'] }}/{{ $slide['video'] }}.mp4"
+                                                type="video/mp4">
                                             Ваш браузер, не поддерживает видео.
                                         </video>
                                     @endif

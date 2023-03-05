@@ -19,8 +19,9 @@
                         <div class="col-12">
                             <div class="file-input">
                                 <img class="prev-img mb-3" src="/images/no-image.webp">
+                                <p class="prev-name mb-3"></p>
                                 <input type="file" id="file" name="file" class="file"
-                                    accept=".jpg,.png,.jpeg,.gif,.webp,.svg,.mp4,.avi">
+                                    accept=".jpg,.png,.jpeg,.gif,.webp,.svg,.mp4">
                                 <label for="file" class="btn btn-success">
                                     Добавить фотографию или видео
                                 </label>
@@ -30,8 +31,7 @@
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="exampleInputTitle" class="form-label">Заголовок записи</label>
-                            <input type="text" name="title" value="{{ old('title') }}" class="form-control"
-                                id="exampleInputTitle">
+                            <input type="text" name="title" class="form-control" id="exampleInputTitle">
                         </div>
                     </div>
                 </div>
@@ -57,11 +57,11 @@
         </div>
     </div>
     <div class="position-fixed top-0 start-0 loader">
+        <p class="loader__bar"></p>
         <div class="spinner-grow" role="status">
-            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 @endsection
 @push('scripts')
-    @vite(['resources/sass/app.scss', 'resources/js/editor.js', 'resources/js/bootstrap.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js', 'resources/js/jquery.form.min.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
 @endpush

@@ -56,9 +56,11 @@ Route::post('/admin/teachers/add', [TeachersController::class, 'addTeacher']);
 Route::get('/admin/teachers/edit/{id}', [TeachersController::class, 'showEditTeacher']);
 Route::post('/admin/teachers/edit/{id}', [TeachersController::class, 'editTeacher']);
 
-
-Route::get('/admin/employment', [EmploymentController::class, 'show']);
+Route::get('/admin/employment', [EmploymentController::class, 'show'])->name('employment');
 Route::post('/admin/employment', [EmploymentController::class, 'delete']);
 
 Route::get('/admin/employment/add', [EmploymentController::class, 'showAddEmployment']);
 Route::post('/admin/employment/add', [EmploymentController::class, 'addEmployment']);
+
+Route::get('/admin/employment/edit/{id}', [EmploymentController::class, 'showEditEmployment']);
+Route::post('/admin/employment/edit/{id}', [EmploymentController::class, 'editEmployment']);

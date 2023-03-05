@@ -1,11 +1,25 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-    const prevImg = document.querySelector('.file-input');
-    prevImg.querySelector("input").addEventListener("change", function () {
+    const file = document.querySelector('.file-input');
+    let prevText = file.querySelector('.prev-name'),
+        filePrev = file.querySelector('.prev-img');
+    file.querySelector("input").addEventListener("change", function () {
         if (this.files[0]) {
-            var fr = new FileReader();
+            let fileType = this.files[0].type,
+                fileName = this.files[0].name,
+                fr = new FileReader();
             fr.addEventListener("load", function () {
-                prevImg.querySelector("img").src = fr.result;
+                if (fileType.indexOf('video') > -1) {
+                    filePrev.src = "";
+                    prevText.innerText = fileName;
+                    prevText.classList.remove('d-none');
+                    filePrev.classList.add('d-none');
+                } else {
+                    filePrev.src = fr.result;
+                    prevText.classList.add('d-none');
+                    filePrev.classList.remove('d-none');
+                }
+
             }, false);
             fr.readAsDataURL(this.files[0]);
         }

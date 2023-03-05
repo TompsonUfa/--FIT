@@ -45,7 +45,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($courses as $course)
-                                    <tr data-course-id={{ $course['id'] }}>
+                                    <tr data-item-id={{ $course['id'] }}>
                                         <td class="align-middle text-center">
                                             <img class="table__img"
                                                 src="/storage/images/courses/{{ $course['id'] . '/' . $course['img'] . '.webp' }}"
