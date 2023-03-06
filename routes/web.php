@@ -3,7 +3,7 @@
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\BotController;
 use App\Http\Controllers\PollitikaController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\PostersController;
 use App\Http\Controllers\TeachersController;
@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainController::class, 'show']);
 Route::post('/', [BotController::class, 'post']);
+
+Route::get('/auth', [LoginController::class, 'show']);
+Route::post('/auth', [LoginController::class, 'auth']);
 
 Route::get('/politika-konfidencialnosti', [PollitikaController::class, 'show']);
 
