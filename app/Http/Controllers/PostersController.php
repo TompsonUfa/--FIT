@@ -55,7 +55,7 @@ class PostersController extends Controller
         $loadImg = Image::make($image)->encode('webp', 75);
         $loadImg->save(Storage::path('/public/images/posters/' . $poster . "/" .  Str::slug($title) . '.webp'));
         if ($poster && $loadImg) {
-            return response()->json(['url' => route('posters')]);
+            return response()->json(['url' => route('admin.posters')]);
         }
     }
     public function editPoster(Request $request, $id)
@@ -86,6 +86,6 @@ class PostersController extends Controller
             $poster->img = $nameImg;
         }
         $poster->save();
-        return response()->json(['url' => route('posters')]);
+        return response()->json(['url' => route('admin.posters')]);
     }
 }

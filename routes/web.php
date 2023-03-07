@@ -24,46 +24,49 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class, 'show']);
 Route::post('/', [BotController::class, 'post']);
 
-Route::get('/auth', [LoginController::class, 'show']);
-Route::post('/auth', [LoginController::class, 'auth']);
+Route::get('/login', [LoginController::class, 'show'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('/politika-konfidencialnosti', [PollitikaController::class, 'show']);
 
-Route::get('admin', function () {
-    return redirect('/admin/courses');
+Route::group(['middleware' => ['auth'], 'namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+
+    Route::get('/', function () {
+        return redirect('/admin/courses');
+    });
+    Route::get('/courses', [CoursesController::class, 'show'])->name('courses');
+    Route::post('/courses', [CoursesController::class, 'delete']);
+
+    Route::get('/courses/add', [CoursesController::class, 'showAddCourse']);
+    Route::post('/courses/add', [CoursesController::class, 'addCourse']);
+
+    Route::get('/courses/edit/{id}', [CoursesController::class, 'showEditCourse']);
+    Route::post('/courses/edit/{id}', [CoursesController::class, 'editCourse']);
+
+    Route::get('/posters', [PostersController::class, 'show'])->name('posters');
+    Route::post('/posters', [PostersController::class, 'delete']);
+
+    Route::get('/posters/add', [PostersController::class, 'showAddPoster']);
+    Route::post('/posters/add', [PostersController::class, 'addPoster']);
+
+    Route::get('/posters/edit/{id}', [PostersController::class, 'showEditPoster']);
+    Route::post('/posters/edit/{id}', [PostersController::class, 'editPoster']);
+
+    Route::get('/teachers', [TeachersController::class, 'show'])->name('teachers');
+    Route::post('/teachers', [TeachersController::class, 'delete']);
+
+    Route::get('/teachers/add', [TeachersController::class, 'showAddTeacher']);
+    Route::post('/teachers/add', [TeachersController::class, 'addTeacher']);
+
+    Route::get('/teachers/edit/{id}', [TeachersController::class, 'showEditTeacher']);
+    Route::post('/teachers/edit/{id}', [TeachersController::class, 'editTeacher']);
+
+    Route::get('/employment', [EmploymentController::class, 'show'])->name('employment');
+    Route::post('/employment', [EmploymentController::class, 'delete']);
+
+    Route::get('/employment/add', [EmploymentController::class, 'showAddEmployment']);
+    Route::post('/employment/add', [EmploymentController::class, 'addEmployment']);
+
+    Route::get('/employment/edit/{id}', [EmploymentController::class, 'showEditEmployment']);
+    Route::post('/employment/edit/{id}', [EmploymentController::class, 'editEmployment']);
 });
-Route::get('/admin/courses', [CoursesController::class, 'show'])->name('courses');
-Route::post('/admin/courses', [CoursesController::class, 'delete']);
-
-Route::get('/admin/courses/add', [CoursesController::class, 'showAddCourse']);
-Route::post('/admin/courses/add', [CoursesController::class, 'addCourse']);
-
-Route::get('/admin/courses/edit/{id}', [CoursesController::class, 'showEditCourse']);
-Route::post('/admin/courses/edit/{id}', [CoursesController::class, 'editCourse']);
-
-Route::get('/admin/posters', [PostersController::class, 'show'])->name('posters');
-Route::post('/admin/posters', [PostersController::class, 'delete']);
-
-Route::get('/admin/posters/add', [PostersController::class, 'showAddPoster']);
-Route::post('/admin/posters/add', [PostersController::class, 'addPoster']);
-
-Route::get('/admin/posters/edit/{id}', [PostersController::class, 'showEditPoster']);
-Route::post('/admin/posters/edit/{id}', [PostersController::class, 'editPoster']);
-
-Route::get('/admin/teachers', [TeachersController::class, 'show'])->name('teachers');
-Route::post('/admin/teachers', [TeachersController::class, 'delete']);
-
-Route::get('/admin/teachers/add', [TeachersController::class, 'showAddTeacher']);
-Route::post('/admin/teachers/add', [TeachersController::class, 'addTeacher']);
-
-Route::get('/admin/teachers/edit/{id}', [TeachersController::class, 'showEditTeacher']);
-Route::post('/admin/teachers/edit/{id}', [TeachersController::class, 'editTeacher']);
-
-Route::get('/admin/employment', [EmploymentController::class, 'show'])->name('employment');
-Route::post('/admin/employment', [EmploymentController::class, 'delete']);
-
-Route::get('/admin/employment/add', [EmploymentController::class, 'showAddEmployment']);
-Route::post('/admin/employment/add', [EmploymentController::class, 'addEmployment']);
-
-Route::get('/admin/employment/edit/{id}', [EmploymentController::class, 'showEditEmployment']);
-Route::post('/admin/employment/edit/{id}', [EmploymentController::class, 'editEmployment']);

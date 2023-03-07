@@ -58,7 +58,7 @@ class TeachersController extends Controller
         $loadImg = Image::make($image)->encode('webp', 75);
         $loadImg->save(Storage::path('/public/images/teachers/' . $teacher . "/" .  Str::slug($title) . '.webp'));
         if ($teacher && $loadImg) {
-            return response()->json(['url' => route('teachers')]);
+            return response()->json(['url' => route('admin.teachers')]);
         }
     }
     public function editTeacher(Request $request, $id)
@@ -94,6 +94,6 @@ class TeachersController extends Controller
             $teacher->img = $nameImg;
         }
         $teacher->save();
-        return response()->json(['url' => route('teachers')]);
+        return response()->json(['url' => route('admin.teachers')]);
     }
 }

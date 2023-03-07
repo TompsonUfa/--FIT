@@ -40,7 +40,7 @@ class EmploymentController extends Controller
 
         return response()
             ->json([
-                'url' => route('employment')
+                'url' => route('admin.employment')
             ]);
     }
     public function showEditEmployment(Request $request, $id)
@@ -102,6 +102,6 @@ class EmploymentController extends Controller
             }
         }
         $employment->save();
-        return response()->json(['url' => route('employment')]);
+        return response()->json(['url' => route('admin.employment')]);
     }
 }

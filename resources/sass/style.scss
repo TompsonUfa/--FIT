@@ -295,6 +295,10 @@ p {
     &__content {
         padding: 0px 10px 27px 10px;
     }
+    h3 {
+        font-size: 19px;
+        padding: 10px 0px;
+    }
     p,
     ul {
         font-size: 18px;
@@ -629,8 +633,8 @@ p {
 .panel-btns {
     z-index: 600;
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 30px;
+    left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -713,6 +717,9 @@ p {
 // панель администратора
 .sidebar {
     background-color: #212529;
+    &__btn_close {
+        display: none;
+    }
     &__content {
         height: 100vh;
         position: -webkit-sticky;
@@ -911,6 +918,9 @@ p {
         box-shadow: 0 0 0 0 rgba(#fe5001, 0);
     }
 }
+.burger {
+    display: none;
+}
 // медиа
 @media screen and (max-width: 1200px) {
     .title {
@@ -1069,7 +1079,38 @@ p {
             padding-bottom: 30px;
         }
     }
-    // секция преподаватели
+    .sidebar {
+        width: 100vw;
+        display: none;
+        touch-action: none;
+        overflow: hidden;
+        position: relative;
+        &_visible {
+            display: block;
+        }
+        &__btn_close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: block;
+            cursor: pointer;
+            svg {
+                fill: var(--white-color);
+            }
+        }
+    }
+    .table__btn_edit {
+        margin-bottom: 10px !important;
+    }
+    .burger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        cursor: pointer;
+        svg {
+            fill: var(--second-color);
+        }
+    }
 }
 @media screen and (max-width: 770px) {
     .main {

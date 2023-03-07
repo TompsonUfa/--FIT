@@ -59,7 +59,7 @@ class CoursesController extends Controller
         $loadImg = Image::make($image)->encode('webp', 75);
         $loadImg->save(Storage::path('/public/images/courses/' . $course . "/" .  Str::slug($title) . '.webp'));
         if ($course && $loadImg) {
-            return response()->json(['url' => route('courses')]);
+            return response()->json(['url' => route('admin.courses')]);
         }
     }
     public function editCourse(Request $request, $id)
@@ -95,6 +95,6 @@ class CoursesController extends Controller
             $course->img = $nameImg;
         }
         $course->save();
-        return response()->json(['url' => route('courses')]);
+        return response()->json(['url' => route('admin.courses')]);
     }
 }

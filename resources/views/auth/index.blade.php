@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +10,36 @@
     @vite(['resources/sass/app.scss'])
     <title>Фитнес клуб Ө-FIT | Авторизация</title>
 </head>
+
 <body>
-    
-        <div class="container py-5 vh-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="container py-5 vh-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-10 col-md-8 col-lg-6 col-xl-5">
                 <form action="" method="POST">
+                    @csrf
                     <h3 class="title mb-3 text-center">Авторизация</h3>
                     <div class="mb-3">
-                      <label for="exampleInputLogin" class="form-label" name="login">Логин</label>
-                      <input type="text" class="form-control" id="exampleInputLogin" required>
+                        <label for="exampleInputLogin" class="form-label">Логин</label>
+                        <input type="text" class="form-control" id="exampleInputLogin" name="name" required>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputPassword" class="form-label">Пароль</label>
-                      <input type="password" class="form-control" id="exampleInputPassword" required> 
+                        <label for="exampleInputPassword" class="form-label">Пароль</label>
+                        <input type="password" class="form-control" id="exampleInputPassword" name="password" required>
                     </div>
+                    @if (isset($errors) && count($errors) > 0)
+                        <div class="alert alert-warning" role="alert">
+                            <ul class="list-unstyled mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <button type="submit" class="btn btn-primary w-100">Войти</button>
-                  </form>
+                </form>
             </div>
-          </div>
-        </div> 
+        </div>
+    </div>
 </body>
+
 </html>

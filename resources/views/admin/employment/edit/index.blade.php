@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="row-12">
-        <div class="panel p-sm-3 p-md-5 mt-5 mb-5 ">
+        <div class="panel p-3 p-md-5 mt-5 mb-5 ">
             <div class="row">
                 <div class="col-12">
                     <h2 class="panel__title mb-3">
@@ -15,7 +15,7 @@
             <form action="" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row justify-content-center mb-3">
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center mb-3">
                         <div class="col-12">
                             <div class="file-input">
                                 @if (empty($employment->img))
@@ -70,5 +70,5 @@
     </div>
 @endsection
 @push('scripts')
-    @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js', 'resources/js/jquery.form.min.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/sidebar.js', 'resources/js/bootstrap.js', 'resources/js/change-img.js', 'resources/js/sending-posts.js'])
 @endpush

@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="row-12">
-        <div class="panel p-sm-3 p-md-5 mt-5">
+        <div class="panel p-3 p-md-5 mt-5">
             <h2 class="panel__title mb-3">
                 Курсы
             </h2>
@@ -111,6 +111,6 @@
         </div>
     </div>
     @push('scripts')
-        @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js', 'resources/js/delete.js'])
+        @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js', 'resources/js/sidebar.js', 'resources/js/delete.js'])
     @endpush
 @endsection
