@@ -48,7 +48,7 @@
                                     <tr data-item-id={{ $teacher['id'] }}>
                                         <td class="align-middle text-center">
                                             <img class="table__img"
-                                                src="/storage/images/teachers/{{ $teacher['id'] . '/' . $teacher['img'] . '.webp' }}"
+                                                src="/storage/images/teachers/{{ $teacher['id'] . '/' . $teacher['img'] . '.webp?=r' . rand(0, 999999) }}"
                                                 alt="{{ $teacher['fullName'] }}">
                                         </td>
                                         <td class="align-middle table__title">{{ $teacher['fullName'] }}</td>

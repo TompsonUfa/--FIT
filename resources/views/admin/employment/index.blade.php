@@ -51,7 +51,7 @@
                                                 <p>Видео</p>
                                             @else
                                                 <img class="table__img"
-                                                    src="/storage/media/employment/{{ $item['id'] . '/' . $item['img'] . '.webp' }}"
+                                                    src="/storage/media/employment/{{ $item['id'] . '/' . $item['img'] . '.webp?=r' . rand(0, 999999) }}"
                                                     alt="{{ $item['title'] }}">
                                             @endif
                                         </td>

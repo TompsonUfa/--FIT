@@ -23,7 +23,7 @@
                                     <p class="prev-name mb-3">{{ $employment->video }}.mp4</p>
                                 @else
                                     <img class="prev-img mb-3"
-                                        src="/storage/media/employment/{{ $employment->id }}/{{ Str::slug($employment->img) }}.webp">
+                                        src="/storage/media/employment/{{ $employment->id }}/{{ Str::slug($employment->img) . '.webp?=r' . rand(0, 999999) }}">
                                     <p class="prev-name mb-3"></p>
                                 @endif
                                 <input type="file" id="file" name="file" class="file"

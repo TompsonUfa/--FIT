@@ -20,7 +20,7 @@
                         <div class="col-12">
                             <div class="file-input">
                                 <img class="prev-img mb-3"
-                                    src="/storage/images/courses/{{ $course->id }}/{{ Str::slug($course->title) }}.webp">
+                                    src="/storage/images/courses/{{ $course->id }}/{{ Str::slug($course->title) . '.webp?=r' . rand(0, 999999) }}">
                                 <p class="prev-name mb-3"></p>
                                 <input type="file" id="image" name="image" class="image"
                                     accept=".jpg,.png,.jpeg,.gif,.webp,.svg">

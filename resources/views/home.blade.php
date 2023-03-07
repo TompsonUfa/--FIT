@@ -253,7 +253,7 @@
                                                 {!! $course['text'] !!}
                                             </div>
                                             <div class="col-12 col-lg-6">
-                                                <img data-src="/storage/images/courses/{{ $course['id'] . '/' . $course['img'] }}.webp"
+                                                <img data-src="/storage/images/courses/{{ $course['id'] . '/' . $course['img'] . '.webp?=r' . rand(0, 999999) }}"
                                                     src="/images/lazy.png" alt="{{ $course['title'] }}"
                                                     class="accordion__img">
                                             </div>
@@ -300,7 +300,7 @@
                 @foreach ($posters as $poster)
                     <div class="col-12 col-lg-6">
                         <img class="posters__img mb-4"
-                            data-src="/storage/images/posters/{{ $poster['id'] }}/{{ $poster['img'] }}.webp"
+                            data-src="/storage/images/posters/{{ $poster['id'] }}/{{ $poster['img'] . '.webp?=r' . rand(0, 999999) }}"
                             src="/images/lazy.png" alt="{{ $poster['name'] }}">
                     </div>
                 @endforeach
@@ -375,7 +375,7 @@
                                             <div
                                                 class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0 order-first order-lg-last">
                                                 <div class="wrapper-img">
-                                                    <img data-src="/storage/images/teachers/{{ $teacher['id'] }}/{{ $teacher['img'] }}.webp"
+                                                    <img data-src="/storage/images/teachers/{{ $teacher['id'] }}/{{ $teacher['img'] . '.webp?=r' . rand(0, 999999) }}"
                                                         src="/images/lazy.png" alt="{{ $teacher['fullName'] }}"
                                                         class="accordion__img teacher__img">
                                                 </div>
@@ -417,7 +417,7 @@
                             @foreach ($employment as $slide)
                                 <div class="slider__item">
                                     @if (empty($slide['video']))
-                                        <img data-src="/storage/media/employment/{{ $slide['id'] }}/{{ $slide['img'] }}.webp"
+                                        <img data-src="/storage/media/employment/{{ $slide['id'] }}/{{ $slide['img'] . '.webp?=r' . rand(0, 999999) }}"
                                             src="/images/lazy.png" class="slider__img" alt="{{ $slide['name'] }}">
                                     @else
                                         <video width="100%" height="100%" controls>
