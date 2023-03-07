@@ -1033,7 +1033,8 @@ p {
         }
     }
     .course {
-        &__img {
+        img {
+            padding-top: 20px;
             object-fit: contain;
         }
     }
@@ -1056,6 +1057,10 @@ p {
         &__item {
             object-fit: cover;
         }
+    }
+    .teacher .wrapper-img {
+        width: 250px;
+        height: 250px;
     }
     .reasons {
         &__desc {
@@ -1084,7 +1089,8 @@ p {
         display: none;
         touch-action: none;
         overflow: hidden;
-        position: relative;
+        position: fixed;
+        z-index: 10;
         &_visible {
             display: block;
         }
@@ -1148,10 +1154,10 @@ p {
         &__item {
             flex: 0 0 100%;
             max-width: 100%;
-            height: 450px;
+            height: 350px;
         }
         &__img {
-            object-fit: cover;
+            object-fit: contain;
         }
         &__btn {
             &_prev {
